@@ -1,0 +1,527 @@
+{
+  "a81a918a-da7c-40d0-9d43-26d817db6a36": {
+    "details": {
+      "milesRadius": 1,
+      "coordinates": [
+        55.8398,
+        -4.2498
+      ],
+      "averageRent": 660.57,
+      "timeToDrive": 4472,
+      "timeToCycle": 13840,
+      "timeToWalk": 12687,
+      "nearestTrainStation": [
+        55.8475,
+        -4.2274
+      ],
+      "nearestBusStop": [
+        55.8255,
+        -4.25
+      ]
+    }
+  },
+  "62222c80-9d06-41fc-afb5-9930b1ffaac7": {
+    "details": {
+      "milesRadius": 3,
+      "coordinates": [
+        55.8348,
+        -4.2686
+      ],
+      "averageRent": 802.32,
+      "timeToDrive": 9158,
+      "timeToCycle": 19654,
+      "timeToWalk": 14965,
+      "nearestTrainStation": [
+        55.8137,
+        -4.2754
+      ],
+      "nearestBusStop": [
+        55.846,
+        -4.2678
+      ]
+    }
+  },
+  "2001d10c-32e3-44af-9ff9-68f8573cd7c0": {
+    "details": {
+      "milesRadius": 5,
+      "coordinates": [
+        55.8688,
+        -4.2667
+      ],
+      "averageRent": 721.88,
+      "timeToDrive": 3885,
+      "timeToCycle": 13324,
+      "timeToWalk": 12359,
+      "nearestTrainStation": [
+        55.8657,
+        -4.2702
+      ],
+      "nearestBusStop": [
+        55.8676,
+        -4.2661
+      ]
+    }
+  },
+  "59092d81-726e-4bb2-b16d-f3cc4569d85d": {
+    "details": {
+      "milesRadius": 10,
+      "coordinates": [
+        55.8723,
+        -4.2916
+      ],
+      "averageRent": 927.18,
+      "timeToDrive": 4620,
+      "timeToCycle": 18082,
+      "timeToWalk": 20662,
+      "nearestTrainStation": [
+        55.8782,
+        -4.2768
+      ],
+      "nearestBusStop": [
+        55.882,
+        -4.2887
+      ]
+    }
+  },
+  "23e31347-3ad6-4bdb-924c-a2d4088b20d0": {
+    "details": {
+      "milesRadius": 15,
+      "coordinates": [
+        55.8543,
+        -4.2517
+      ],
+      "averageRent": 780.15,
+      "timeToDrive": 9164,
+      "timeToCycle": 18683,
+      "timeToWalk": 19863,
+      "nearestTrainStation": [
+        55.8554,
+        -4.2464
+      ],
+      "nearestBusStop": [
+        55.858,
+        -4.2532
+      ]
+    }
+  },
+  "51c1cd13-a018-45ef-a7a6-65f3f20679c4": {
+    "details": {
+      "milesRadius": 1,
+      "coordinates": [
+        55.8488,
+        -4.2833
+      ],
+      "averageRent": 475.91,
+      "timeToDrive": 1349,
+      "timeToCycle": 7445,
+      "timeToWalk": 14108,
+      "nearestTrainStation": [
+        55.8396,
+        -4.2948
+      ],
+      "nearestBusStop": [
+        55.8425,
+        -4.2815
+      ]
+    }
+  },
+  "e5057713-1de5-4503-aa66-e42117436b7e": {
+    "details": {
+      "milesRadius": 3,
+      "coordinates": [
+        55.8545,
+        -4.2602
+      ],
+      "averageRent": 755.34,
+      "timeToDrive": 2015,
+      "timeToCycle": 15595,
+      "timeToWalk": 22147,
+      "nearestTrainStation": [
+        55.8503,
+        -4.2838
+      ],
+      "nearestBusStop": [
+        55.8659,
+        -4.2514
+      ]
+    }
+  },
+  "c7268674-cc47-4fd0-abe8-10916c79e05a": {
+    "details": {
+      "milesRadius": 5,
+      "coordinates": [
+        55.8242,
+        -4.2718
+      ],
+      "averageRent": 946.9,
+      "timeToDrive": 1424,
+      "timeToCycle": 10275,
+      "timeToWalk": 11162,
+      "nearestTrainStation": [
+        55.8333,
+        -4.2508
+      ],
+      "nearestBusStop": [
+        55.8215,
+        -4.2696
+      ]
+    }
+  },
+  "22afc6e0-8c74-4392-9d21-16e872782630": {
+    "details": {
+      "milesRadius": 10,
+      "coordinates": [
+        55.8895,
+        -4.2757
+      ],
+      "averageRent": 510.68,
+      "timeToDrive": 6915,
+      "timeToCycle": 9185,
+      "timeToWalk": 25758,
+      "nearestTrainStation": [
+        55.8909,
+        -4.2688
+      ],
+      "nearestBusStop": [
+        55.8951,
+        -4.275
+      ]
+    }
+  },
+  "49991b6a-cc43-4f3c-9b2a-a1a233d46783": {
+    "details": {
+      "milesRadius": 15,
+      "coordinates": [
+        55.8842,
+        -4.2307
+      ],
+      "averageRent": 469.85,
+      "timeToDrive": 9137,
+      "timeToCycle": 8749,
+      "timeToWalk": 12218,
+      "nearestTrainStation": [
+        55.889,
+        -4.2322
+      ],
+      "nearestBusStop": [
+        55.8935,
+        -4.2379
+      ]
+    }
+  },
+  "4bd34e6c-f09d-4def-8aa4-25482c402ce3": {
+    "details": {
+      "milesRadius": 1,
+      "coordinates": [
+        55.8529,
+        -4.2394
+      ],
+      "averageRent": 733.72,
+      "timeToDrive": 8296,
+      "timeToCycle": 7238,
+      "timeToWalk": 24484,
+      "nearestTrainStation": [
+        55.877,
+        -4.2299
+      ],
+      "nearestBusStop": [
+        55.8475,
+        -4.2405
+      ]
+    }
+  },
+  "a542d3de-d62a-4ec5-900d-21ddc5fd5537": {
+    "details": {
+      "milesRadius": 3,
+      "coordinates": [
+        55.8963,
+        -4.2739
+      ],
+      "averageRent": 655.79,
+      "timeToDrive": 8494,
+      "timeToCycle": 11552,
+      "timeToWalk": 22058,
+      "nearestTrainStation": [
+        55.8933,
+        -4.2623
+      ],
+      "nearestBusStop": [
+        55.8879,
+        -4.2629
+      ]
+    }
+  },
+  "e54d5edd-0bc0-4bac-a965-a5ebdc64f15c": {
+    "details": {
+      "milesRadius": 5,
+      "coordinates": [
+        55.8666,
+        -4.2557
+      ],
+      "averageRent": 466.15,
+      "timeToDrive": 9097,
+      "timeToCycle": 10648,
+      "timeToWalk": 27497,
+      "nearestTrainStation": [
+        55.8685,
+        -4.2589
+      ],
+      "nearestBusStop": [
+        55.866,
+        -4.255
+      ]
+    }
+  },
+  "9180d6a7-2c03-4b5d-b623-1ceb9bb01707": {
+    "details": {
+      "milesRadius": 10,
+      "coordinates": [
+        55.8433,
+        -4.2367
+      ],
+      "averageRent": 535.7,
+      "timeToDrive": 3816,
+      "timeToCycle": 15028,
+      "timeToWalk": 19353,
+      "nearestTrainStation": [
+        55.8457,
+        -4.2209
+      ],
+      "nearestBusStop": [
+        55.8459,
+        -4.2357
+      ]
+    }
+  },
+  "7d5daf63-4a36-4a3f-a5e5-6e25a2e689db": {
+    "details": {
+      "milesRadius": 15,
+      "coordinates": [
+        55.835,
+        -4.2626
+      ],
+      "averageRent": 693.09,
+      "timeToDrive": 5016,
+      "timeToCycle": 14417,
+      "timeToWalk": 14371,
+      "nearestTrainStation": [
+        55.8304,
+        -4.2699
+      ],
+      "nearestBusStop": [
+        55.835,
+        -4.2626
+      ]
+    }
+  },
+  "424a0f90-6c73-40ef-b78e-667f2945abbd": {
+    "details": {
+      "milesRadius": 1,
+      "coordinates": [
+        55.832,
+        -4.2441
+      ],
+      "averageRent": 570.1,
+      "timeToDrive": 8173,
+      "timeToCycle": 6245,
+      "timeToWalk": 26524,
+      "nearestTrainStation": [
+        55.8275,
+        -4.2468
+      ],
+      "nearestBusStop": [
+        55.829,
+        -4.2504
+      ]
+    }
+  },
+  "6477dad1-a4a2-45a1-a45c-91aefda0e19b": {
+    "details": {
+      "milesRadius": 3,
+      "coordinates": [
+        55.895,
+        -4.2524
+      ],
+      "averageRent": 403.16,
+      "timeToDrive": 3914,
+      "timeToCycle": 16824,
+      "timeToWalk": 21729,
+      "nearestTrainStation": [
+        55.8842,
+        -4.2368
+      ],
+      "nearestBusStop": [
+        55.8906,
+        -4.2483
+      ]
+    }
+  },
+  "f081d31b-9de3-49e3-9a5f-a0fd4d241e71": {
+    "details": {
+      "milesRadius": 5,
+      "coordinates": [
+        55.8454,
+        -4.2506
+      ],
+      "averageRent": 864.03,
+      "timeToDrive": 9873,
+      "timeToCycle": 18108,
+      "timeToWalk": 12186,
+      "nearestTrainStation": [
+        55.8591,
+        -4.2414
+      ],
+      "nearestBusStop": [
+        55.8376,
+        -4.2464
+      ]
+    }
+  },
+  "bf890663-6b8f-416b-9bf8-6151bbbdff3f": {
+    "details": {
+      "milesRadius": 10,
+      "coordinates": [
+        55.861,
+        -4.2711
+      ],
+      "averageRent": 965.74,
+      "timeToDrive": 6264,
+      "timeToCycle": 16445,
+      "timeToWalk": 21090,
+      "nearestTrainStation": [
+        55.8514,
+        -4.2841
+      ],
+      "nearestBusStop": [
+        55.86,
+        -4.2702
+      ]
+    }
+  },
+  "92ef9c6a-fc04-4f1d-ad68-0272268036fc": {
+    "details": {
+      "milesRadius": 15,
+      "coordinates": [
+        55.8488,
+        -4.2602
+      ],
+      "averageRent": 664.57,
+      "timeToDrive": 5459,
+      "timeToCycle": 16613,
+      "timeToWalk": 14721,
+      "nearestTrainStation": [
+        55.8499,
+        -4.2608
+      ],
+      "nearestBusStop": [
+        55.8451,
+        -4.2651
+      ]
+    }
+  },
+  "e9d0b744-43e1-4a06-aa64-840ffa908c37": {
+    "details": {
+      "milesRadius": 1,
+      "coordinates": [
+        55.8868,
+        -4.2753
+      ],
+      "averageRent": 888.8,
+      "timeToDrive": 9590,
+      "timeToCycle": 6436,
+      "timeToWalk": 21320,
+      "nearestTrainStation": [
+        55.8855,
+        -4.2685
+      ],
+      "nearestBusStop": [
+        55.8774,
+        -4.278
+      ]
+    }
+  },
+  "95f66f28-ed68-49f5-8d62-0e51d8f18cd7": {
+    "details": {
+      "milesRadius": 3,
+      "coordinates": [
+        55.8493,
+        -4.2576
+      ],
+      "averageRent": 465.6,
+      "timeToDrive": 2731,
+      "timeToCycle": 19519,
+      "timeToWalk": 24446,
+      "nearestTrainStation": [
+        55.8504,
+        -4.2624
+      ],
+      "nearestBusStop": [
+        55.8503,
+        -4.2589
+      ]
+    }
+  },
+  "b03ec69a-3c4a-45f6-bca9-6e6bd2aa5aee": {
+    "details": {
+      "milesRadius": 5,
+      "coordinates": [
+        55.8608,
+        -4.2503
+      ],
+      "averageRent": 483.86,
+      "timeToDrive": 7616,
+      "timeToCycle": 11011,
+      "timeToWalk": 19350,
+      "nearestTrainStation": [
+        55.8614,
+        -4.2502
+      ],
+      "nearestBusStop": [
+        55.8534,
+        -4.2558
+      ]
+    }
+  },
+  "78c52774-b5cf-41d7-a315-f74aac73527f": {
+    "details": {
+      "milesRadius": 10,
+      "coordinates": [
+        55.8691,
+        -4.2635
+      ],
+      "averageRent": 817.97,
+      "timeToDrive": 1748,
+      "timeToCycle": 10542,
+      "timeToWalk": 22117,
+      "nearestTrainStation": [
+        55.8656,
+        -4.2574
+      ],
+      "nearestBusStop": [
+        55.8667,
+        -4.2686
+      ]
+    }
+  },
+  "227aff61-ef72-4703-ad4e-3f3f29ec680a": {
+    "details": {
+      "milesRadius": 15,
+      "coordinates": [
+        55.8883,
+        -4.2249
+      ],
+      "averageRent": 586.4,
+      "timeToDrive": 4598,
+      "timeToCycle": 11398,
+      "timeToWalk": 23233,
+      "nearestTrainStation": [
+        55.8954,
+        -4.2448
+      ],
+      "nearestBusStop": [
+        55.8895,
+        -4.239
+      ]
+    }
+  }
+}
