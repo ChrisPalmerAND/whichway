@@ -1,41 +1,56 @@
-import { h } from 'preact';
-import style from './style.css';
+import { h } from "preact";
+import style from "./style.css";
+import React, { Component } from "react";
+import { render } from "react-dom";
 
 const Home = () => {
-	return (
-		<div class={style.home}>
-			<a href="https://preactjs.com">
-				<img src="../../assets/preact-logo.svg" alt="Preact Logo" height="160" width="160" />
-			</a>
-			<h1>Get Started Building PWAs with Preact-CLI</h1>
-			<section>
-				<Resource
-					title="Learn Preact"
-					description="If you're new to Preact, try the interactive tutorial to learn important concepts"
-					link="https://preactjs.com/tutorial/"
-				/>
-				<Resource
-					title="Differences to React"
-					description="If you're coming from React, check out our docs for where Preact differs"
-					link="https://preactjs.com/guide/v10/differences-to-react"
-				/>
-				<Resource
-					title="Learn Preact-CLI"
-					description="To learn more about Preact-CLI, read through the ReadMe & Wiki"
-					link="https://github.com/preactjs/preact-cli#preact-cli--"
-				/>
-			</section>
-		</div>
-	);
+  console.log("hellow world");
+  if ("geolocation" in navigator) {
+    console.log("Available");
+  } else {
+    console.log("Not Available");
+  }
+
+  const options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0,
+  };
+
+  function success(pos) {
+    const crd = pos.coords;
+
+    console.log("Your current position is:");
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude: ${crd.longitude}`);
+    console.log(`More or less ${crd.accuracy} meters.`);
+  }
+
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+  }
+
+  navigator.geolocation.getCurrentPosition(success, error, options);
+
+  return (
+    <div class={style.home}>
+      <section>
+        <Resource
+          title="I know your location"
+          description="Your location is ... "
+        />
+      </section>
+    </div>
+  );
 };
 
-const Resource = props => {
-	return (
-		<a href={props.link} class={style.resource}>
-			<h2>{props.title}</h2>
-			<p>{props.description}</p>
-		</a>
-	);
+const Resource = (props) => {
+  return (
+    <a href={props.link} class={style.resource}>
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
+    </a>
+  );
 };
 
 export default Home;
