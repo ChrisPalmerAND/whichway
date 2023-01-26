@@ -15,35 +15,3 @@ axios
   .catch((error) => {
     console.log("error", error);
   });
-
-app.get("/distance", (req, res) => {
-  const start = req.start;
-  const end = "";
-  console.log("Request received");
-  axios
-    .get(
-      `https://api.mapbox.com/directions/v5/mapbox/driving/${start},${end};` +
-        req.params.from_start +
-        "," +
-        req.params.from_end +
-        ";" +
-        req.params.to_start +
-        "," +
-        req.params.to_end +
-        ";" +
-        "?annotations=" +
-        process.env.MAPBOX_ANNOTATIONS +
-        "&overview=" +
-        +process.env.MAPBOX_OVERVIEW +
-        "&geometries=" +
-        process.env.MAPBOX_GEOMETRY +
-        "&access_token=" +
-        process.env.MAPBOX_ACCESS_TOKEN
-    )
-    .then((response) => {
-      res.json(response.data);
-    })
-    .catch((error) => {
-      res.json(error);
-    });
-});

@@ -49,7 +49,7 @@ for (let i = 0; i < mileRadiusCollection.length; i++) {
         false
       )
     );
-    averageRent = parseFloat(faker.finance.amount(400, 1000));
+    rent = parseFloat(faker.finance.amount(400, 1000));
     timeToDrive = Math.floor(Math.random() * 10000 + 1);
     timeToCycle = Math.floor(Math.random() * 15000 + 1);
     timeToWalk = Math.floor(Math.random() * 20000 + 1);
@@ -61,14 +61,14 @@ for (let i = 0; i < mileRadiusCollection.length; i++) {
     );
 
     house["details"] = {
-      milesRadius: miles,
+      milesFromWork: null,
       coordinates: coordinatesOfTheHouse,
-      averageRent: averageRent,
-      timeToDrive: timeToDrive,
-      timeToCycle: timeToCycle,
-      timeToWalk: timeToWalk,
-      nearestTrainStation: nearestTrainStation,
-      nearestBusStop: nearestBusStop,
+      rent: rent,
+      timeToDrive: null,
+      timeToCycle: null,
+      timeToWalk: null,
+      nearestTrainStation: null,
+      nearestBusStop: null,
     };
     houseCollection[id] = house;
   }
