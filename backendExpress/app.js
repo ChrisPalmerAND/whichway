@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 
-app.use(express.json);
+app.use(express.json());
 
 app.post("/distance", (req, res) => {
   const start = `${req.body.startLongitude},${req.body.startLatitude};`;
@@ -21,4 +21,4 @@ app.post("/distance", (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log("Listening on port 3000!"));
+app.listen(3001, () => console.log("Listening on port 3001!"));
