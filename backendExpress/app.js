@@ -23,4 +23,20 @@ app.post("/distance", (req, res) => {
     });
 });
 
+app.post("/nearest", (req, res) => {
+  const coordinates = `${req.body.longitude},${req.body.latitude}`;
+  const token = `&access_token=${process.env.MAPBOX_TOKEN}`;
+
+  axios
+    .get(
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/train-station.json?proximity=${coordinates}${token}`
+    )
+    .then((response) => {
+      res.json(response.data);
+    })
+    .catch((error) => {
+      res.json(error);
+    });
+});
+
 app.listen(3001, () => console.log("Listening on port 3001!"));
