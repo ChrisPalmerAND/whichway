@@ -1,13 +1,15 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const axios = require("axios");
 const app = express();
 
+dotenv.config();
 app.use(express.json());
 
 app.post("/distance", (req, res) => {
   const start = `${req.body.startLongitude},${req.body.startLatitude};`;
   const end = `${req.body.endLongitude},${req.body.endLatitude}`;
-  const token = `?access_token=${req.body.access_token}`;
+  const token = `?access_token=${process.env.MAPBOX_TOKEN}`;
 
   axios
     .get(
