@@ -1,9 +1,21 @@
 {
-  "devDependencies": {
-    "@faker-js/faker": "^7.6.0"
+  "private": true,
+  "name": "whichWay",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
-  "dependencies": {
-    "axios": "^1.2.4",
-    "uuid": "^9.0.0"
-  }
+  "scripts": {
+    "frontend": "yarn workspace frontend start",
+    "backend": "yarn workspace backend start",
+    "start": "concurrently --kill-others-on-fail \"yarn frontend\"  \"yarn backend\"",
+    "lint": "yarn workspaces foreach -pv run lint",
+    "format": "yarn workspaces foreach -pv run format",
+    "coverage": "yarn workspaces foreach -ptv run coverage"
+  },
+  "devDependencies": {
+    "lint-staged": "^12.3.8"
+  },
+  "packageManager": "yarn@3.2.2"
 }
