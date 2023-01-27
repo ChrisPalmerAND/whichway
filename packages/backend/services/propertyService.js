@@ -1,5 +1,5 @@
-const allProperties = require('../utils/properties');
-const turf = require('@turf/turf');
+import * as turf from '@turf/turf';
+import { allProperties } from '../utils/properties.js';
 
 const getAllProperties = () => {
   return allProperties;
@@ -9,7 +9,7 @@ const getAllPropertiesCoordinate = () => {
   return getAllProperties().map((property) => property.details.coordinates);
 };
 
-const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
+export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
   const points = turf.points(getAllPropertiesCoordinate());
   let propertiesWithinPolygons = [];
   polygonsData.forEach(({ coordinates, id }) => {
@@ -34,5 +34,3 @@ const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
   });
   return [...new Set(propertiesWithinPolygons.flat())];
 };
-
-module.exports = getPropertiesWithinPolygonsCoordinates;

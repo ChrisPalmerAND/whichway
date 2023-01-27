@@ -1,4 +1,4 @@
-const allProperties = [
+export const allProperties = [
   {
     id: '5b230031-ccc9-4972-9d00-ef6010b81d84',
     details: {
@@ -60,5 +60,3 @@ const allProperties = [
     },
   },
 ];
-
-module.exports = allProperties;

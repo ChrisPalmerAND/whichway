@@ -1,4 +1,4 @@
-const getPropertiesWithinPolygonsCoordinates = require('../services/propertyService');
+import { getPropertiesWithinPolygonsCoordinates } from '../services/propertyService.js';
 
 class PropertyController {
   async getPropertiesWithinPolygon(req, res) {
@@ -6,4 +6,4 @@ class PropertyController {
     res.send(getPropertiesWithinPolygonsCoordinates(polygonData));
   }
 }
-module.exports = new PropertyController();
+export default new PropertyController();

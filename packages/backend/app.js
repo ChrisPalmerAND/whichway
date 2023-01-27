@@ -1,8 +1,8 @@
-const propertyRouter = require('./routes/propertyRoutes.js');
+import propertyRouter from './routes/propertyRoutes.js';
 
-const express = require('express');
-const dotenv = require('dotenv');
-const axios = require('axios');
+import * as dotenv from 'dotenv';
+import express from 'express';
+
 const app = express();
 
 dotenv.config();
@@ -21,14 +21,14 @@ app.use(express.json());
 //   const token = `?access_token=${process.env.MAPBOX_TOKEN}`;
 //   const methodOfTravel = 'driving';
 
-//   axios
-//     .get(`https://api.mapbox.com/directions/v5/mapbox/${methodOfTravel}/${start}${end}${token}`)
-//     .then((response) => {
-//       res.json(response.data);
-//     })
-//     .catch((error) => {
-//       res.json(error);
-//     });
+// axios
+//   .get(`https://api.mapbox.com/directions/v5/mapbox/${methodOfTravel}/${start}${end}${token}`)
+//   .then((response) => {
+//     res.json(response.data);
+//   })
+//   .catch((error) => {
+//     res.json(error);
+//   });
 // });
 
 // app.post('/nearest', (req, res) => {

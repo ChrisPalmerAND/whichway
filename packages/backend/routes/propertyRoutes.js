@@ -1,6 +1,7 @@
-const express = require('express');
-const propertyController = require('../controllers/propertyController');
+import * as express from 'express';
+import propertyController from '../controllers/propertyController.js';
+
 const router = express.Router();
 
 router.get('/', propertyController.getPropertiesWithinPolygon);
-module.exports = router;
+export default router;
