@@ -11,7 +11,7 @@ import {
   TileLayer,
 } from "react-leaflet";
 import { EditControl } from "react-leaflet-draw";
-import { allProperties } from "../../data";
+import { allProperties } from "../data";
 
 export const houseIcon = new Icon({
   iconUrl: "/images/Logo.png",

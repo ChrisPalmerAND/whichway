@@ -1,4 +1,4 @@
-import RenderMap from "./services/leaflet/renderMap";
+import RenderMap from "./components/renderMap";
 import Instructions from "./components/instructions";
 import AreaSummary from "./components/areaSummary";
 
