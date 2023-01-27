@@ -22,7 +22,7 @@ export const andDigitalIcon = new Icon({
   iconUrl: "/images/and.png",
   iconSize: [35, 35],
 });
-const RenderMap = () => {
+const Map = () => {
   const propertiesLatLong = allProperties.map(
     (property) => property.details.coordinates
   );
@@ -203,4 +203,4 @@ const RenderMap = () => {
   );
 };
 
-export default RenderMap;
+export default Map;
