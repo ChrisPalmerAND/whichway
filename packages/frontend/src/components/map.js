@@ -1,4 +1,4 @@
-import * as turf from '@turf/turf';
+import axios from 'axios';
 import { Icon } from 'leaflet';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import 'leaflet/dist/leaflet.css';
@@ -22,36 +22,17 @@ const Map = () => {
   const [polygonPoints, setPolygonPoints] = useState([]);
   const [propertiesInScope, setPropertiesInScope] = useState([]);
   const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
+
+  const getPropertiesWithinPolygons = async (polygonPoints) => {
+    const propertiesWithinPolygons = await axios.post('http://localhost:8080/api/v1/property', {
+      polygons: polygonPoints,
+    });
+    setPropertiesInScope(propertiesWithinPolygons.data);
+  };
+
   useEffect(() => {
     if (polygonPoints.length) {
-      console.log('polygonPoints', polygonPoints);
-      //all the coordinates of the properties
-      const points = turf.points(propertiesLatLong);
-      let properties2 = [];
-      polygonPoints.forEach((singlePolygonPoints) => {
-        //all the polygon (draw) coordinates
-        const searchWithin = turf.polygon([[...singlePolygonPoints.coordinates]]);
-        //finds all the properties within the polygon
-        const pointsWithin = turf.pointsWithinPolygon(points, searchWithin);
-        //turf give us back an array of object, we go through it and we find amongst all the properties, the ones that have the same coordinates, and we add it to the array
-        if (pointsWithin.features.length) {
-          pointsWithin.features.forEach((feature) => {
-            let property = allProperties.find(
-              (property) => property.details.coordinates === feature.geometry.coordinates
-            );
-            if (property) {
-              properties2.push({
-                ...property,
-                leafletId: singlePolygonPoints.id,
-              });
-            }
-          });
-        }
-      });
-      setPropertiesInScope((properties) => {
-        const propInScope = [...properties, ...properties2];
-        return [...new Set(propInScope.flat())];
-      });
+      getPropertiesWithinPolygons(polygonPoints);
     }
 
     //don't add propertiesLatLong will cause infinite loop
@@ -152,7 +133,7 @@ const Map = () => {
                 <Popup>
                   <div>
                     <h2>{id}</h2>
-                    <p>Rent: {details.averageRent}</p>
+                    <p>Rent: {details.rent}</p>
                   </div>
                 </Popup>
               </Marker>

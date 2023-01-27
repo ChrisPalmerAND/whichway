@@ -3,5 +3,5 @@ import propertyController from '../controllers/propertyController.js';
 
 const router = express.Router();
 
-router.get('/', propertyController.getPropertiesWithinPolygon);
+router.post('/', propertyController.getPropertiesWithinPolygon);
 export default router;
