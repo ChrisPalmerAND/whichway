@@ -1,4 +1,4 @@
-const calculateBusDuration = (distance, duration) => {
+export const calculateBusDuration = (distance, duration) => {
   if (distance < 5000) {
     return duration * 1.2;
   } else if (distance >= 5000 && distance <= 10000) {
@@ -8,7 +8,7 @@ const calculateBusDuration = (distance, duration) => {
   }
 };
 
-const calculateTrainDuration = (distance, duration) => {
+export const calculateTrainDuration = (distance, duration) => {
   if (distance < 5000) {
     return duration * 0.9;
   } else if (distance >= 5000 && distance <= 10000) {
@@ -17,5 +17,3 @@ const calculateTrainDuration = (distance, duration) => {
     return duration * 0.7;
   }
 };
-
-module.exports = { calculateBusDuration, calculateTrainDuration };

@@ -42,11 +42,15 @@ export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
 const getDistance = async (startCoordinates, endCoordinates, methodOfTravel) => {
   const token = `?access_token=${process.env.MAPBOX_TOKEN}`;
 
-  const resp = await axios.get(
+  const { data } = await axios.get(
     `https://api.mapbox.com/directions/v5/mapbox/${methodOfTravel}/${startCoordinates}${endCoordinates}?access_token=${token}`
   );
 
-  return resp.data;
+  data.routes.forEach((route) => {
+    route.durationByTrain = calculateTrainDuration(route.distance, route.duration);
+    route.durationByBus = calculateBusDuration(route.distance, route.duration);
+  });
+  return data;
 };
 
 //TOTO what does this???
