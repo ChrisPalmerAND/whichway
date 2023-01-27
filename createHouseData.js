@@ -22,11 +22,8 @@ const house = {
 */
 
 let id;
-let coordinatesOfTheHouse;
-let averageRent;
-let timeToDrive;
-let timeToCycle;
-let timeToWalk;
+let workCoordinates;
+let rent;
 let nearestTrainStation;
 let nearestBusStop;
 
@@ -38,37 +35,35 @@ const mileRadiusCollection = [1, 3, 5, 10, 15];
 let houseCollection = {};
 
 for (let i = 0; i < mileRadiusCollection.length; i++) {
-  for (let j = 0; j < 5; j++) {
+  for (let j = 0; j < 20; j++) {
     let house = {};
     id = uuidv4();
     miles = mileRadiusCollection[j];
-    coordinatesOfTheHouse = cleanCoordinates(
+    workCoordinates = cleanCoordinates(
       faker.address.nearbyGPSCoordinate(
         [55.861331, -4.250493],
         milesRadius,
         false
       )
     );
-    rent = parseFloat(faker.finance.amount(400, 1000));
-    timeToDrive = Math.floor(Math.random() * 10000 + 1);
-    timeToCycle = Math.floor(Math.random() * 15000 + 1);
-    timeToWalk = Math.floor(Math.random() * 20000 + 1);
+    rent = parseFloat(faker.finance.amount(400, 1500));
     nearestTrainStation = cleanCoordinates(
-      faker.address.nearbyGPSCoordinate(coordinatesOfTheHouse, 2, false)
+      faker.address.nearbyGPSCoordinate(workCoordinates, 2, false)
     );
     nearestBusStop = cleanCoordinates(
-      faker.address.nearbyGPSCoordinate(coordinatesOfTheHouse, 1, false)
+      faker.address.nearbyGPSCoordinate(workCoordinates, 1, false)
     );
 
     house["details"] = {
       milesFromWork: null,
-      coordinates: coordinatesOfTheHouse,
+      workCoordinates: workCoordinates,
       rent: rent,
       timeToDrive: null,
       timeToCycle: null,
       timeToWalk: null,
       nearestTrainStation: null,
       nearestBusStop: null,
+      averageRent: null,
     };
     houseCollection[id] = house;
   }

@@ -10,10 +10,11 @@ app.post("/distance", (req, res) => {
   const start = `${req.body.startLongitude},${req.body.startLatitude};`;
   const end = `${req.body.endLongitude},${req.body.endLatitude}`;
   const token = `?access_token=${process.env.MAPBOX_TOKEN}`;
+  const methodOfTravel = "driving";
 
   axios
     .get(
-      `https://api.mapbox.com/directions/v5/mapbox/driving/${start}${end}${token}`
+      `https://api.mapbox.com/directions/v5/mapbox/${methodOfTravel}/${start}${end}${token}`
     )
     .then((response) => {
       res.json(response.data);
