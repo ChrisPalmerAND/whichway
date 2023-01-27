@@ -18,4 +18,4 @@ const calculateTrainDuration = (distance, duration) => {
   }
 };
 
-export { calculateBusDuration, calculateTrainDuration };
+module.exports = { calculateBusDuration, calculateTrainDuration };

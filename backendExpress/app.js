@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const axios = require("axios");
 const app = express();
-const utils = require("./utils");
+const { calculateBusDuration, calculateTrainDuration } = require("./utils");
 
 dotenv.config();
 app.use(express.json());
@@ -18,11 +18,11 @@ app.post("/distance", (req, res) => {
     )
     .then((response) => {
       response.data.routes.forEach((route) => {
-        route.durationByTrain = utils.calculateTrainDuration(
+        route.durationByTrain = calculateTrainDuration(
           route.distance,
           route.duration
         );
-        route.durationByBus = utils.calculateBusDuration(
+        route.durationByBus = calculateBusDuration(
           route.distance,
           route.duration
         );
