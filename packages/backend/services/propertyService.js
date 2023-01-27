@@ -1,5 +1,9 @@
 import * as turf from '@turf/turf';
+import * as dotenv from 'dotenv';
 import { allProperties } from '../utils/properties.js';
+dotenv.config();
+
+const token = process.env.MAPBOX_TOKEN;
 
 const getAllProperties = () => {
   return allProperties;
@@ -33,4 +37,21 @@ export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
     }
   });
   return [...new Set(propertiesWithinPolygons.flat())];
+};
+
+const getDistance = async (startCoordinates, endCoordinates, methodOfTravel) => {
+  const token = `?access_token=${process.env.MAPBOX_TOKEN}`;
+
+  const resp = await axios.get(
+    `https://api.mapbox.com/directions/v5/mapbox/${methodOfTravel}/${startCoordinates}${endCoordinates}?access_token=${token}`
+  );
+
+  return resp.data;
+};
+
+//TOTO what does this???
+const getNearestWhat = async (pointOfInterest, coordinates) => {
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${pointOfInterest}.json?type=poi&proximity=${coordinates}&access_token=${token}`;
+  const resp = await axios.get(url);
+  return resp.data;
 };
