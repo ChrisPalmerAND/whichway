@@ -2,6 +2,11 @@
     "startLatitude": 55.76077050000001,
     "startLongitude":  -4.174113500000001,
     "endLatitude": 55.861055, 
-    "endLongitude": -4.250809,
-    "access_token": ""
+    "endLongitude": -4.250809
+}
+
+{  
+    "latitude": 55.861055, 
+    "longitude": -4.250809,
+    "pointOfInterest": "bus"
 }

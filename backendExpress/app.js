@@ -25,13 +25,13 @@ app.post("/distance", (req, res) => {
 });
 
 app.post("/nearest", (req, res) => {
+  const pointOfInterest = req.body.pointOfInterest;
   const coordinates = `${req.body.longitude},${req.body.latitude}`;
   const token = `&access_token=${process.env.MAPBOX_TOKEN}`;
 
+  const api = `https://api.mapbox.com/geocoding/v5/mapbox.places/${pointOfInterest}.json?type=poi&proximity=${coordinates}${token}`;
   axios
-    .get(
-      `https://api.mapbox.com/geocoding/v5/mapbox.places/train-station.json?proximity=${coordinates}${token}`
-    )
+    .get(api)
     .then((response) => {
       res.json(response.data);
     })
