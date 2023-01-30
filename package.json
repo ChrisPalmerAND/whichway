@@ -16,7 +16,5 @@
     "lint-staged": "^12.3.8"
   },
   "packageManager": "yarn@3.2.2",
-  "dependencies": {
-    "bootstrap": "^5.2.3"
-  }
+  "dependencies": {}
 }
