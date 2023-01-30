@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cd packages/frontend
+yarn run lint-frontend
+cd ..
+cd backend
+yarn run lint-backend
