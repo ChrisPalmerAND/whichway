@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "start": "node app.js",
-        "prepare": "cd .. && husky install frontend/.husky",
+        "prepare": "cd ../.. && husky install backend/.husky",
         "lint-backend": "lint-staged"
     },
     "dependencies": {
