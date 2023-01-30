@@ -3,6 +3,5 @@
 
 cd packages/frontend
 yarn run lint-frontend
-cd ..
-cd backend
+cd ../backend
 yarn run lint-backend
