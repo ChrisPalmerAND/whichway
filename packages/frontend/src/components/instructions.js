@@ -1,6 +1,6 @@
 const Instructions = () => {
   return (
-    <div>
+    <div style={{ "z-index": 1000 }}>
       <h1>Not sure where to live?</h1>
 
       <p>
