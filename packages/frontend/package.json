@@ -23,7 +23,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "prepare": "cd ../.. && husky install frontend/.husky",
+        "prepare": "cd ../.. && husky install packages/frontend/.husky",
         "lint-frontend": "lint-staged"
     },
     "eslintConfig": {
