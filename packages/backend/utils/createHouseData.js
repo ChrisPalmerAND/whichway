@@ -1,9 +1,9 @@
-const { faker } = require("@faker-js/faker");
-const { v4: uuidv4 } = require("uuid");
+import { faker } from "@faker-js/faker";
+import { v4 as uuidv4 } from "uuid";
 const milesRadius = 3;
-const { writeFile } = require("fs");
+import { writeFile } from "fs";
 
-const path = "./houseData.json";
+const path = "./utils/houseData.json";
 
 /*
 Return object
@@ -24,6 +24,7 @@ const house = {
 let id;
 let workCoordinates;
 let rent;
+let miles;
 let nearestTrainStation;
 let nearestBusStop;
 
@@ -32,12 +33,12 @@ const cleanCoordinates = (coordinates) => {
 };
 
 const mileRadiusCollection = [1, 3, 5, 10, 15];
-let houseCollection = {};
+let houseCollection = [];
 
 for (let i = 0; i < mileRadiusCollection.length; i++) {
   for (let j = 0; j < 20; j++) {
     let house = {};
-    id = uuidv4();
+    house["id"] = uuidv4();
     miles = mileRadiusCollection[j];
     workCoordinates = cleanCoordinates(
       faker.address.nearbyGPSCoordinate(
@@ -65,7 +66,7 @@ for (let i = 0; i < mileRadiusCollection.length; i++) {
       nearestBusStop: null,
       averageRent: null,
     };
-    houseCollection[id] = house;
+    houseCollection.push(house);
   }
 }
 console.log(houseCollection);
