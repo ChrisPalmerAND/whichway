@@ -1,4 +1,4 @@
-import { getPropertiesWithinPolygonsCoordinates } from '../services/propertyService.js';
+import { getPropertiesWithinPolygonsCoordinates } from "../services/propertyService.js";
 
 class PropertyController {
   async getPropertiesWithinPolygon(req, res) {

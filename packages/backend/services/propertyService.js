@@ -1,6 +1,6 @@
-import * as turf from '@turf/turf';
-import * as dotenv from 'dotenv';
-import { allProperties } from '../utils/properties.js';
+import * as turf from "@turf/turf";
+import * as dotenv from "dotenv";
+import { allProperties } from "../utils/properties.js";
 dotenv.config();
 
 const token = process.env.MAPBOX_TOKEN;
@@ -20,12 +20,16 @@ export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
     //all the polygon (draw) coordinates
     const searchWithin = turf.polygon([[...coordinates]]);
     //finds all the properties within the polygon
-    const propertyCoordinatesWithinPolygon = turf.pointsWithinPolygon(points, searchWithin);
+    const propertyCoordinatesWithinPolygon = turf.pointsWithinPolygon(
+      points,
+      searchWithin
+    );
     //turf give us back an array of object, we go through it and we find amongst all the properties, the ones that have the same coordinates, and we add it to the array
     if (propertyCoordinatesWithinPolygon.features.length) {
       propertyCoordinatesWithinPolygon.features.forEach((feature) => {
         let property = getAllProperties().find(
-          (property) => property.details.coordinates === feature.geometry.coordinates
+          (property) =>
+            property.details.coordinates === feature.geometry.coordinates
         );
         if (property) {
           propertiesWithinPolygons.push({
@@ -39,7 +43,11 @@ export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
   return [...new Set(propertiesWithinPolygons.flat())];
 };
 
-const getDistance = async (startCoordinates, endCoordinates, methodOfTravel) => {
+const getDistance = async (
+  startCoordinates,
+  endCoordinates,
+  methodOfTravel
+) => {
   const token = `?access_token=${process.env.MAPBOX_TOKEN}`;
 
   const { data } = await axios.get(
@@ -47,7 +55,10 @@ const getDistance = async (startCoordinates, endCoordinates, methodOfTravel) => 
   );
 
   data.routes.forEach((route) => {
-    route.durationByTrain = calculateTrainDuration(route.distance, route.duration);
+    route.durationByTrain = calculateTrainDuration(
+      route.distance,
+      route.duration
+    );
     route.durationByBus = calculateBusDuration(route.distance, route.duration);
   });
   return data;

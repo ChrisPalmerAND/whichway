@@ -1,0 +1,6 @@
+# Ignore artifacts:
+build
+coverage
+.yarn.lock
+# Ignore all HTML files:
+*.html
