@@ -2,10 +2,12 @@
   "name": "backend",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
+    "@turf/turf": "^6.5.0",
     "axios": "^1.2.5",
     "dotenv": "^16.0.3",
     "eslint": "^8.32.0",

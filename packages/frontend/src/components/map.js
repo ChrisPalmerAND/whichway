@@ -1,67 +1,36 @@
-import * as turf from "@turf/turf";
-import { Icon } from "leaflet";
-import "leaflet-draw/dist/leaflet.draw.css";
-import "leaflet/dist/leaflet.css";
-import React, { useEffect, useState } from "react";
-import {
-  FeatureGroup,
-  MapContainer,
-  Marker,
-  Popup,
-  TileLayer,
-} from "react-leaflet";
-import { EditControl } from "react-leaflet-draw";
-import { allProperties } from "../data";
+import axios from 'axios';
+import { Icon } from 'leaflet';
+import 'leaflet-draw/dist/leaflet.draw.css';
+import 'leaflet/dist/leaflet.css';
+import React, { useEffect, useState } from 'react';
+import { FeatureGroup, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { EditControl } from 'react-leaflet-draw';
 
 export const houseIcon = new Icon({
-  iconUrl: "/images/Logo.png",
+  iconUrl: '/images/Logo.png',
   iconSize: [35, 35],
 });
 
 export const andDigitalIcon = new Icon({
-  iconUrl: "/images/and.png",
+  iconUrl: '/images/and.png',
   iconSize: [35, 35],
 });
 const Map = () => {
-  const propertiesLatLong = allProperties.map(
-    (property) => property.details.coordinates
-  );
   const [mapLayers, setMapLayers] = useState([]);
   const [polygonPoints, setPolygonPoints] = useState([]);
   const [propertiesInScope, setPropertiesInScope] = useState([]);
   const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
+
+  const getPropertiesWithinPolygons = async (polygonPoints) => {
+    const propertiesWithinPolygons = await axios.post('http://localhost:8080/api/v1/property', {
+      polygons: polygonPoints,
+    });
+    setPropertiesInScope(propertiesWithinPolygons.data);
+  };
+
   useEffect(() => {
     if (polygonPoints.length) {
-      //all the coordinates of the properties
-      const points = turf.points(propertiesLatLong);
-      let properties2 = [];
-      polygonPoints.forEach((singlePolygonPoints) => {
-        //all the polygon (draw) coordinates
-        const searchWithin = turf.polygon([
-          [...singlePolygonPoints.coordinates],
-        ]);
-        //finds all the properties within the polygon
-        const pointsWithin = turf.pointsWithinPolygon(points, searchWithin);
-        //turf give us back an array of object, we go through it and we find amongst all the properties, the ones that have the same coordinates, and we add it to the array
-        if (pointsWithin.features.length) {
-          pointsWithin.features.forEach((feature) => {
-            let property = allProperties.find(
-              (property) =>
-                property.details.coordinates === feature.geometry.coordinates
-            );
-            if (property) {
-              properties2.push({
-                ...property,
-                leafletId: singlePolygonPoints.id,
-              });
-            }
-          });
-        }
-      });
-      setPropertiesInScope((properties) => {
-        const propInScope = [...properties, ...properties2];
-        return [...new Set(propInScope.flat())];
-      });
+      getPropertiesWithinPolygons(polygonPoints);
     }
 
     //don't add propertiesLatLong will cause infinite loop
@@ -70,13 +39,10 @@ const Map = () => {
   const createDraw = (e) => {
     setPropertiesInScope([]);
     const { layerType, layer } = e;
-    if (layerType === "polygon") {
+    if (layerType === 'polygon') {
       const { _leaflet_id: leafletId } = layer;
       //in case of multi poligon, we want a way to know which coordinate belongs to which polygon, hence we add an id.
-      setMapLayers((layers) => [
-        ...layers,
-        { id: leafletId, latLngs: layer.getLatLngs()[0] },
-      ]);
+      setMapLayers((layers) => [...layers, { id: leafletId, latLngs: layer.getLatLngs()[0] }]);
 
       //we create a polygon coordinate array as they are needed for turf to check which properties are inside or not.
       setPolygonPoints((layers) => {
@@ -84,9 +50,7 @@ const Map = () => {
           ...layers,
           {
             id: leafletId,
-            coordinates: layer
-              .toGeoJSON()
-              .geometry.coordinates[0].map((latLng) => [latLng[1], latLng[0]]),
+            coordinates: layer.toGeoJSON().geometry.coordinates[0].map((latLng) => [latLng[1], latLng[0]]),
           },
         ];
       });
@@ -102,9 +66,7 @@ const Map = () => {
       //we reset the edited coordinate of the selected polygon
       setMapLayers((layers) =>
         layers.map((l) => {
-          return l.id === _leaflet_id
-            ? { ...l, latLngs: { ...editing.latlngs[0] } }
-            : 1;
+          return l.id === _leaflet_id ? { ...l, latLngs: { ...editing.latlngs[0] } } : 1;
         })
       );
 
@@ -127,11 +89,9 @@ const Map = () => {
       layers: { _layers },
     } = e;
     Object.values(_layers).map(({ _leaflet_id }) => {
-      //remove the selected polygon through his id
+      //remove the selected polygon through its id
       setMapLayers((layers) => layers.filter((l) => l.id !== _leaflet_id));
-      setPropertiesInScope((properties) =>
-        properties.filter((property) => property.leafletId !== _leaflet_id)
-      );
+      setPropertiesInScope((properties) => properties.filter((property) => property.leafletId !== _leaflet_id));
       setPolygonPoints((layers) => layers.filter((l) => l.id !== _leaflet_id));
     });
   };
@@ -139,29 +99,25 @@ const Map = () => {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "row",
-        alignContent: "center",
-        justifyContent: "center",
-        border: "black",
-        margin: "10px",
+        display: 'flex',
+        flexDirection: 'row',
+        alignContent: 'center',
+        justifyContent: 'center',
+        border: 'black',
+        margin: '10px',
       }}
     >
       <MapContainer
         center={[55.860916, -4.251433]}
         zoom={13}
         scrollWheelZoom={false}
-        style={{ width: "50%", height: 450 }}
+        style={{ width: '50%', height: 450 }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
-        <Marker
-          key={"And_marker"}
-          icon={andDigitalIcon}
-          position={AND_DIGITAL_COORDINATES}
-        >
+        <Marker key={'And_marker'} icon={andDigitalIcon} position={AND_DIGITAL_COORDINATES}>
           <Popup>
             <div>
               <h2>Best place </h2>
@@ -175,7 +131,7 @@ const Map = () => {
                 <Popup>
                   <div>
                     <h2>{id}</h2>
-                    <p>Rent: {details.averageRent}</p>
+                    <p>Rent: {details.rent}</p>
                   </div>
                 </Popup>
               </Marker>
@@ -184,7 +140,7 @@ const Map = () => {
 
         <FeatureGroup>
           <EditControl
-            position="topright"
+            position='topright'
             onEdited={editDraw}
             onCreated={createDraw}
             onDeleted={deleteDraw}
