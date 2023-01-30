@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "run-data": "node utils/createHouseData.js"
   },
   "dependencies": {
     "@turf/turf": "^6.5.0",
