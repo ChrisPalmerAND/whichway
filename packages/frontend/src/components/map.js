@@ -5,7 +5,6 @@ import 'leaflet/dist/leaflet.css';
 import React, { useEffect, useState } from 'react';
 import { FeatureGroup, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
-import { allProperties } from '../data';
 
 export const houseIcon = new Icon({
   iconUrl: '/images/Logo.png',
@@ -17,7 +16,6 @@ export const andDigitalIcon = new Icon({
   iconSize: [35, 35],
 });
 const Map = () => {
-  const propertiesLatLong = allProperties.map((property) => property.details.coordinates);
   const [mapLayers, setMapLayers] = useState([]);
   const [polygonPoints, setPolygonPoints] = useState([]);
   const [propertiesInScope, setPropertiesInScope] = useState([]);
@@ -91,7 +89,7 @@ const Map = () => {
       layers: { _layers },
     } = e;
     Object.values(_layers).map(({ _leaflet_id }) => {
-      //remove the selected polygon through his id
+      //remove the selected polygon through its id
       setMapLayers((layers) => layers.filter((l) => l.id !== _leaflet_id));
       setPropertiesInScope((properties) => properties.filter((property) => property.leafletId !== _leaflet_id));
       setPolygonPoints((layers) => layers.filter((l) => l.id !== _leaflet_id));
