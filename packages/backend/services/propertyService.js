@@ -1,13 +1,9 @@
 import * as turf from '@turf/turf';
-import * as dotenv from 'dotenv';
-import { allProperties } from '../utils/properties.js';
 import axios from 'axios';
-import {
-    AND_DIGITAL_COORDINATES,
-    METHODS_OF_TRAVEL,
-    POINTS_OF_INTEREST,
-} from '../utils/constants.js';
+import * as dotenv from 'dotenv';
 import { calculateBusDuration, calculateTrainDuration } from '../utils/calculateDurations.js';
+import { AND_DIGITAL_COORDINATES, METHODS_OF_TRAVEL } from '../utils/constants.js';
+import { allProperties } from '../utils/properties.js';
 dotenv.config();
 const token = process.env.MAPBOX_TOKEN;
 
