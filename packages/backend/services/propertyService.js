@@ -19,7 +19,7 @@ const getAllPropertiesCoordinate = () => {
     return getAllProperties().map((property) => property.details.coordinates);
 };
 
-export const getPropertiesWithinPolygonsCoordinates = async (polygonsData) => {
+export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
     const points = turf.points(getAllPropertiesCoordinate());
     let propertiesWithinPolygons = [];
     polygonsData.forEach(({ coordinates, id }) => {
@@ -43,15 +43,13 @@ export const getPropertiesWithinPolygonsCoordinates = async (polygonsData) => {
         }
     });
 
-    // for (let property of propertiesWithinPolygons) {
-    //     calculateTravelToWork(property);
-    //     calculateNearestPublicTransport(property);
-    // // }
-    // const test = propertiesWithinPolygons.map((property) => {
-    //     calculateTravelToWork(property);
-    //     calculateNearestPublicTransport(property);
-    // });
-
+    const calculateDetailForProperties = async (propertiesWithinPolygons) => {
+        for (let property of propertiesWithinPolygons) {
+            await calculateTravelToWork(property);
+            await calculateNearestPublicTransport(property);
+        }
+    };
+    calculateDetailForProperties(propertiesWithinPolygons);
     return [...new Set(propertiesWithinPolygons.flat())];
 };
 
@@ -109,6 +107,5 @@ const calculateNearestPublicTransport = async (property) => {
         const coordinates = [property.details.coordinates[1], property.details.coordinates[0]];
         const poiDataSet = await getNearestPointOfInterest(pointOfInterest, coordinates);
         property.details[publicTransportAttribute] = poiDataSet;
-        console.log(property);
     }
 };

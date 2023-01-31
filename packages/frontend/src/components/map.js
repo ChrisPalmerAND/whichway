@@ -26,7 +26,7 @@ const Map = () => {
         const propertiesWithinPolygons = await axios.post('http://localhost:8080/api/v1/property', {
             polygons: polygonPoints,
         });
-        console.log('propswithpolys', propertiesWithinPolygons);
+
         setPropertiesInScope(propertiesWithinPolygons.data);
     };
 
@@ -134,6 +134,7 @@ const Map = () => {
                 </Marker>
                 {propertiesInScope.length &&
                     propertiesInScope.map(({ id, details }) => {
+                        console.log('details', details);
                         return (
                             <Marker key={id} position={details.coordinates} icon={houseIcon}>
                                 <Popup>
