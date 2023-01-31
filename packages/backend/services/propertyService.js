@@ -19,7 +19,7 @@ const getAllPropertiesCoordinate = () => {
     return getAllProperties().map((property) => property.details.coordinates);
 };
 
-export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
+export const getPropertiesWithinPolygonsCoordinates = async (polygonsData) => {
     const points = turf.points(getAllPropertiesCoordinate());
     let propertiesWithinPolygons = [];
     polygonsData.forEach(({ coordinates, id }) => {
@@ -43,9 +43,15 @@ export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
         }
     });
 
-    for (let property of propertiesWithinPolygons) {
-        calculateTravelToWork(property);
-    }
+    // for (let property of propertiesWithinPolygons) {
+    //     calculateTravelToWork(property);
+    //     calculateNearestPublicTransport(property);
+    // // }
+    // const test = propertiesWithinPolygons.map((property) => {
+    //     calculateTravelToWork(property);
+    //     calculateNearestPublicTransport(property);
+    // });
+
     return [...new Set(propertiesWithinPolygons.flat())];
 };
 
@@ -61,11 +67,11 @@ const getNearestPointOfInterest = async (pointOfInterest, coordinates) => {
     const resp = await axios.get(
         `https://api.mapbox.com/geocoding/v5/mapbox.places/${pointOfInterest}.json?type=poi&proximity=${coordinates}&access_token=${token}`,
     );
-    const data = [
-        resp.data.features[0].properties.address,
-        resp.data.features[0].context[0].text,
-        resp.data.features[0].geometry.coordinates,
-    ];
+    const data = {
+        address: resp.data.features[0].properties.address,
+        postcode: resp.data.features[0].context[0].text,
+        coordinates: resp.data.features[0].geometry.coordinates,
+    };
     return data;
 };
 
@@ -94,4 +100,15 @@ const calculateTravelToWork = async (property) => {
         property.details.driving.distance,
         property.details.driving.duration,
     );
+};
+
+const calculateNearestPublicTransport = async (property) => {
+    for (const pointOfInterest of POINTS_OF_INTEREST) {
+        const publicTransportAttribute =
+            pointOfInterest === 'train' ? 'nearestTrainStation' : 'nearestBusStop';
+        const coordinates = [property.details.coordinates[1], property.details.coordinates[0]];
+        const poiDataSet = await getNearestPointOfInterest(pointOfInterest, coordinates);
+        property.details[publicTransportAttribute] = poiDataSet;
+        console.log(property);
+    }
 };
