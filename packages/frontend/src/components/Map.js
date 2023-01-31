@@ -26,6 +26,7 @@ export const Map = () => {
         const propertiesWithinPolygons = await axios.post('http://localhost:8080/api/v1/property', {
             polygons: polygonPoints,
         });
+
         setPropertiesInScope(propertiesWithinPolygons.data);
     };
 
@@ -129,7 +130,7 @@ export const Map = () => {
                                 <Popup>
                                     <div>
                                         <h2>{id}</h2>
-                                        <p>Rent: {details.rent}</p>
+                                        <p>Rent: {details.nearestTrainStation.address}</p>
                                     </div>
                                 </Popup>
                             </Marker>
