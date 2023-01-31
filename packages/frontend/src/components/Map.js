@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import React, { useEffect, useState } from 'react';
 import { FeatureGroup, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
-
+/* eslint-disable react/prop-types */
 export const houseIcon = new Icon({
     iconUrl: '/images/Logo.png',
     iconSize: [35, 35],
@@ -15,7 +15,7 @@ export const andDigitalIcon = new Icon({
     iconUrl: '/images/and.png',
     iconSize: [35, 35],
 });
-const Map = () => {
+export const Map = () => {
     // eslint-disable-next-line no-unused-vars
     const [mapLayers, setMapLayers] = useState([]);
     const [polygonPoints, setPolygonPoints] = useState([]);
@@ -105,16 +105,7 @@ const Map = () => {
     };
 
     return (
-        <div
-            style={{
-                width: '100vw',
-                display: 'flex',
-                flexDirection: 'row',
-                alignContent: 'center',
-                justifyContent: 'center',
-                border: 'black',
-            }}
-        >
+        <div>
             <MapContainer
                 center={[55.860916, -4.251433]}
                 zoom={13}
@@ -167,5 +158,3 @@ const Map = () => {
         </div>
     );
 };
-
-export default Map;
