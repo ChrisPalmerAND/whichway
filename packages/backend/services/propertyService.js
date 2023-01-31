@@ -72,15 +72,9 @@ const calculateTravelToWork = async (property) => {
 
     const startCoordinates = [property.details.coordinates[1], property.details.coordinates[0]];
 
-    for (let i = 0; i < METHOD_OF_TRAVEL.length; i++) {
-        let method = METHOD_OF_TRAVEL[i];
-        const distanceAndDurationData = await getDirections(
-            startCoordinates,
-            endCoordinates,
-            method,
-        );
-
-        property.details[method] = {
+    for (const i of METHOD_OF_TRAVEL) {
+        const distanceAndDurationData = await getDirections(startCoordinates, endCoordinates, i);
+        property.details[i] = {
             distance: distanceAndDurationData[0].distance,
             duration: distanceAndDurationData[0].duration,
         };
