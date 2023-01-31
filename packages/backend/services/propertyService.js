@@ -7,6 +7,7 @@ import {
     METHODS_OF_TRAVEL,
     POINTS_OF_INTEREST,
 } from '../utils/constants.js';
+import { calculateBusDuration, calculateTrainDuration } from '../utils/calculateDurations.js';
 dotenv.config();
 const token = process.env.MAPBOX_TOKEN;
 
@@ -41,9 +42,10 @@ export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
             });
         }
     });
-    propertiesWithinPolygons.forEach((property) => {
+
+    for (let property of propertiesWithinPolygons) {
         calculateTravelToWork(property);
-    });
+    }
     return [...new Set(propertiesWithinPolygons.flat())];
 };
 
@@ -73,10 +75,23 @@ const calculateTravelToWork = async (property) => {
     const startCoordinates = [property.details.coordinates[1], property.details.coordinates[0]];
 
     for (const methodOfTravel of METHODS_OF_TRAVEL) {
-        const distanceAndDurationData = await getDirections(startCoordinates, endCoordinates, i);
+        const distanceAndDurationData = await getDirections(
+            startCoordinates,
+            endCoordinates,
+            methodOfTravel,
+        );
         property.details[methodOfTravel] = {
             distance: distanceAndDurationData[0].distance,
             duration: distanceAndDurationData[0].duration,
         };
     }
+
+    property.details['bus'] = calculateBusDuration(
+        property.details.driving.distance,
+        property.details.driving.duration,
+    );
+    property.details['train'] = calculateTrainDuration(
+        property.details.driving.distance,
+        property.details.driving.duration,
+    );
 };

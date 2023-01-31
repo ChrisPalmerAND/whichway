@@ -33,7 +33,6 @@ const Map = () => {
         if (polygonPoints.length) {
             getPropertiesWithinPolygons(polygonPoints);
         }
-
         //don't add propertiesLatLong will cause infinite loop
     }, [polygonPoints]);
 
