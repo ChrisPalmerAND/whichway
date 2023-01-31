@@ -4,8 +4,8 @@ import { allProperties } from '../utils/properties.js';
 import axios from 'axios';
 import {
     AND_DIGITAL_COORDINATES,
-    METHOD_OF_TRAVEL,
-    POINT_OF_INTEREST,
+    METHODS_OF_TRAVEL,
+    POINTS_OF_INTEREST,
 } from '../utils/constants.js';
 dotenv.config();
 const token = process.env.MAPBOX_TOKEN;
@@ -72,7 +72,7 @@ const calculateTravelToWork = async (property) => {
 
     const startCoordinates = [property.details.coordinates[1], property.details.coordinates[0]];
 
-    for (const methodOfTravel of METHOD_OF_TRAVEL) {
+    for (const methodOfTravel of METHODS_OF_TRAVEL) {
         const distanceAndDurationData = await getDirections(startCoordinates, endCoordinates, i);
         property.details[methodOfTravel] = {
             distance: distanceAndDurationData[0].distance,
