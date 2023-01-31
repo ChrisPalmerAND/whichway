@@ -2,7 +2,11 @@ import * as turf from '@turf/turf';
 import axios from 'axios';
 import * as dotenv from 'dotenv';
 import { calculateBusDuration, calculateTrainDuration } from '../utils/calculateDurations.js';
-import { AND_DIGITAL_COORDINATES, METHODS_OF_TRAVEL } from '../utils/constants.js';
+import {
+    AND_DIGITAL_COORDINATES,
+    METHODS_OF_TRAVEL,
+    POINTS_OF_INTEREST,
+} from '../utils/constants.js';
 import { allProperties } from '../utils/properties.js';
 dotenv.config();
 const token = process.env.MAPBOX_TOKEN;
@@ -15,7 +19,7 @@ const getAllPropertiesCoordinate = () => {
     return getAllProperties().map((property) => property.details.coordinates);
 };
 
-export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
+export const getPropertiesWithinPolygonsCoordinates = async (polygonsData) => {
     const points = turf.points(getAllPropertiesCoordinate());
     let propertiesWithinPolygons = [];
     polygonsData.forEach(({ coordinates, id }) => {
@@ -39,13 +43,11 @@ export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
         }
     });
 
-    const calculateDetailForProperties = async (propertiesWithinPolygons) => {
-        for (let property of propertiesWithinPolygons) {
-            await calculateTravelToWork(property);
-            await calculateNearestPublicTransport(property);
-        }
-    };
-    calculateDetailForProperties(propertiesWithinPolygons);
+    for (let property of propertiesWithinPolygons) {
+        await calculateTravelToWork(property);
+        await calculateNearestPublicTransport(property);
+    }
+
     return [...new Set(propertiesWithinPolygons.flat())];
 };
 

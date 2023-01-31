@@ -125,7 +125,6 @@ export const Map = () => {
                 </Marker>
                 {propertiesInScope.length &&
                     propertiesInScope.map(({ id, details }) => {
-                        console.log('details', details);
                         return (
                             <Marker key={id} position={details.coordinates} icon={houseIcon}>
                                 <Popup>
