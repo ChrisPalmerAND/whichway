@@ -4,9 +4,6 @@ import { v4 as uuidv4 } from 'uuid';
 const createHouseData = () => {
     const milesRadius = 3;
 
-    let rent;
-    let coordinates;
-
     const cleanCoordinates = (coordinates) => {
         return [parseFloat(coordinates[0]), parseFloat(coordinates[1])];
     };
@@ -16,25 +13,26 @@ const createHouseData = () => {
 
     for (let i = 0; i < mileRadiusCollection.length; i++) {
         for (let j = 0; j < 20; j++) {
-            let house = {
+            const coordinates = cleanCoordinates(
+                faker.address.nearbyGPSCoordinate([55.861331, -4.250493], milesRadius, false),
+            );
+            const rent = parseFloat(faker.finance.amount(400, 1500));
+
+            const house = {
+                id: uuidv4(),
                 details: {
+                    coordinates,
+                    rent,
                     driving: null,
                     cycling: null,
                     walking: null,
                     train: null,
                     bus: null,
-                    nearestTrainStation: [],
-                    nearestBusStop: [],
+                    nearestTrainStation: null,
+                    nearestBusStop: null,
                 },
             };
-            house['id'] = uuidv4();
-            coordinates = cleanCoordinates(
-                faker.address.nearbyGPSCoordinate([55.861331, -4.250493], milesRadius, false),
-            );
-            rent = parseFloat(faker.finance.amount(400, 1500));
 
-            house['details']['coordinates'] = coordinates;
-            house['details']['rent'] = rent;
             houseCollection.push(house);
         }
     }
@@ -47,7 +45,8 @@ const createHouseData = () => {
     ];
 
     fixedHouseCoordinates.forEach((houseCoordinates) => {
-        let additionalHouse = {
+        const rent = parseFloat(faker.finance.amount(400, 1500));
+        const additionalHouse = {
             id: uuidv4(),
             details: {
                 coordinates: houseCoordinates,
@@ -56,9 +55,9 @@ const createHouseData = () => {
                 walking: null,
                 train: null,
                 bus: null,
-                nearestTrainStation: [],
-                nearestBusStop: [],
-                rent: parseFloat(faker.finance.amount(400, 1500)),
+                nearestTrainStation: null,
+                nearestBusStop: null,
+                rent,
             },
         };
         houseCollection.push(additionalHouse);
