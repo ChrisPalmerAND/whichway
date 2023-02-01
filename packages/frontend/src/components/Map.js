@@ -33,19 +33,22 @@ export const Map = () => {
 
     const getPropertyDetails = async (propertyId) => {
         const property = propertiesInScope.find((prop) => prop.id === propertyId);
+        console.log('property', property);
         if (!property.alreadyFetched) {
+            console.log('inside if');
             await axios
                 .get(`http://localhost:8080/api/v1/property/${propertyId}`)
                 .then(({ data }) => {
+                    console.log('data', data);
                     const index = propertiesInScope.findIndex(
                         (property) => property.id === data.id
                     );
-                    setPropertiesInScope((properties) => {
-                        const newProp = properties;
-                        newProp[index] = { ...data, alreadyFetched: true };
-
-                        return newProp;
-                    });
+                    console.log('index', index);
+                    const newProp = propertiesInScope;
+                    newProp[index] = { ...data, alreadyFetched: true };
+                    console.log('newProp', newProp);
+                    setPropertiesInScope(newProp);
+                    console.log('properertiesInScope[index]', propertiesInScope[index]);
                     setActiveProperty(propertiesInScope[index]);
                 });
         } else {
