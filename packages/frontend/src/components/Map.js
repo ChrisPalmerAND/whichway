@@ -5,6 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import React, { useEffect, useState } from 'react';
 import { FeatureGroup, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
+import { PopupWrapper } from './PopupWrapper';
 /* eslint-disable react/prop-types */
 export const houseIcon = new Icon({
     iconUrl: '/images/Logo.png',
@@ -127,12 +128,7 @@ export const Map = () => {
                     propertiesInScope.map(({ id, details }) => {
                         return (
                             <Marker key={id} position={details.coordinates} icon={houseIcon}>
-                                <Popup>
-                                    <div>
-                                        <h2>{id}</h2>
-                                        <p>Rent: {details.nearestTrainStation.address}</p>
-                                    </div>
-                                </Popup>
+                                <PopupWrapper id={id} details={details}></PopupWrapper>
                             </Marker>
                         );
                     })}
