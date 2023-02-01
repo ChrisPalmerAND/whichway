@@ -8,6 +8,7 @@ import {
     getPropertiesWithinPolygonsPoints,
     getSinglePropertyDetails,
 } from '../service/propertyService';
+import { PopUpWrapper } from './PopUpWrapper';
 /* eslint-disable react/prop-types */
 export const houseIcon = new Icon({
     iconUrl: '/images/Logo.png',
@@ -154,31 +155,7 @@ export const Map = () => {
                             />
                         );
                     })}
-                {!!activeProperty && (
-                    <Popup
-                        position={activeProperty.details.coordinates}
-                        eventHandlers={{
-                            popupclose: () => setActiveProperty(null),
-                        }}
-                    >
-                        <div>
-                            <h2>{activeProperty.id}</h2>
-                            <p>Rent: {activeProperty.details.rent}</p>
-                            <p>
-                                Cycling:
-                                {` ${activeProperty.details.cycling.distance} metre / ${activeProperty.details.cycling.duration} seconds`}
-                            </p>
-                            <p>
-                                driving:
-                                {` ${activeProperty.details.driving.distance} metre / ${activeProperty.details.driving.duration} seconds`}
-                            </p>
-                            <p>
-                                train:
-                                {` ${activeProperty.details.train} seconds`}
-                            </p>
-                        </div>
-                    </Popup>
-                )}
+                {!!activeProperty && <PopUpWrapper details={activeProperty.details} />}
 
                 <FeatureGroup>
                     <EditControl
