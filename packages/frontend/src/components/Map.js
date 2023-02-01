@@ -20,6 +20,7 @@ export const Map = () => {
     const [mapLayers, setMapLayers] = useState([]);
     const [polygonPoints, setPolygonPoints] = useState([]);
     const [propertiesInScope, setPropertiesInScope] = useState([]);
+    const [activeProperty, setActiveProperty] = useState();
     const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
 
     const getPropertiesWithinPolygons = async (polygonPoints) => {
@@ -28,6 +29,14 @@ export const Map = () => {
         });
 
         setPropertiesInScope(propertiesWithinPolygons.data);
+    };
+
+    const getPropertyDetails = async (propertyId) => {
+        const propertyDetails = await axios.get(
+            `http://localhost:8080/api/v1/property/${propertyId}`
+        );
+        console.log('propertyDetails', propertyDetails.data);
+        setActiveProperty(propertyDetails.data);
     };
 
     useEffect(() => {
@@ -126,13 +135,26 @@ export const Map = () => {
                 {propertiesInScope.length &&
                     propertiesInScope.map(({ id, details }) => {
                         return (
-                            <Marker key={id} position={details.coordinates} icon={houseIcon}>
-                                <Popup>
-                                    <div>
-                                        <h2>{id}</h2>
-                                        <p>Rent: {details.nearestTrainStation.address}</p>
-                                    </div>
-                                </Popup>
+                            <Marker
+                                key={id}
+                                position={details.coordinates}
+                                icon={houseIcon}
+                                eventHandlers={{
+                                    click: async () => {
+                                        await getPropertyDetails(id);
+                                        console.log('marker clicked');
+                                    },
+                                }}
+                            >
+                                {!!activeProperty && (
+                                    <Popup>
+                                        {console.log(activeProperty)}
+                                        <div>
+                                            <h2>{id}</h2>
+                                            <p>Rent: {details.nearestTrainStation.address}</p>
+                                        </div>
+                                    </Popup>
+                                )}
                             </Marker>
                         );
                     })}

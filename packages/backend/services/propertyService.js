@@ -19,7 +19,7 @@ const getAllPropertiesCoordinate = () => {
     return getAllProperties().map((property) => property.details.coordinates);
 };
 
-export const getPropertiesWithinPolygonsCoordinates = async (polygonsData) => {
+export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
     const points = turf.points(getAllPropertiesCoordinate());
     let propertiesWithinPolygons = [];
     polygonsData.forEach(({ coordinates, id }) => {
@@ -43,12 +43,15 @@ export const getPropertiesWithinPolygonsCoordinates = async (polygonsData) => {
         }
     });
 
-    for (let property of propertiesWithinPolygons) {
-        await calculateTravelToWork(property);
-        await calculateNearestPublicTransport(property);
-    }
-
     return [...new Set(propertiesWithinPolygons.flat())];
+};
+
+export const getPropertyById = async (id) => {
+    const property = getAllProperties().find((property) => property.id === id);
+
+    await calculateTravelToWork(property);
+    await calculateNearestPublicTransport(property);
+    return property;
 };
 
 const getDirections = async (startCoordinates, endCoordinates, methodOfTravel) => {
