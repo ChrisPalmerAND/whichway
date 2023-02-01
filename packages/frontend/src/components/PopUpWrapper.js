@@ -28,7 +28,7 @@ export const PopUpWrapper = ({ details, setActiveProperty }) => {
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-train-subway" /> Train:
-                    {` ${details.train} metres`}
+                    {` ${details.bus} metres`}
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-train-subway" /> Nearest Train Station:
