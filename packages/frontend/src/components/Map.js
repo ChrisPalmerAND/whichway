@@ -1,10 +1,13 @@
-import axios from 'axios';
 import { Icon } from 'leaflet';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import 'leaflet/dist/leaflet.css';
 import React, { useEffect, useState } from 'react';
 import { FeatureGroup, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
+import {
+    getPropertiesWithinPolygonsPoints,
+    getSinglePropertyDetails,
+} from '../service/propertyService';
 /* eslint-disable react/prop-types */
 export const houseIcon = new Icon({
     iconUrl: '/images/Logo.png',
@@ -20,14 +23,27 @@ export const Map = () => {
     const [mapLayers, setMapLayers] = useState([]);
     const [polygonPoints, setPolygonPoints] = useState([]);
     const [propertiesInScope, setPropertiesInScope] = useState([]);
+    const [activeProperty, setActiveProperty] = useState();
     const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
 
     const getPropertiesWithinPolygons = async (polygonPoints) => {
-        const propertiesWithinPolygons = await axios.post('http://localhost:8080/api/v1/property', {
-            polygons: polygonPoints,
-        });
-
+        const propertiesWithinPolygons = await getPropertiesWithinPolygonsPoints(polygonPoints);
         setPropertiesInScope(propertiesWithinPolygons.data);
+    };
+
+    const getPropertyDetails = async (propertyId) => {
+        const property = propertiesInScope.find((prop) => prop.id === propertyId);
+        if (!property.alreadyFetched) {
+            await getSinglePropertyDetails(propertyId).then(({ data }) => {
+                const index = propertiesInScope.findIndex((property) => property.id === data.id);
+                const newProp = propertiesInScope;
+                newProp[index] = { ...data, alreadyFetched: true };
+                setPropertiesInScope(newProp);
+                setActiveProperty(propertiesInScope[index]);
+            });
+        } else {
+            setActiveProperty(property);
+        }
     };
 
     useEffect(() => {
@@ -126,16 +142,43 @@ export const Map = () => {
                 {propertiesInScope.length &&
                     propertiesInScope.map(({ id, details }) => {
                         return (
-                            <Marker key={id} position={details.coordinates} icon={houseIcon}>
-                                <Popup>
-                                    <div>
-                                        <h2>{id}</h2>
-                                        <p>Rent: {details.nearestTrainStation.address}</p>
-                                    </div>
-                                </Popup>
-                            </Marker>
+                            <Marker
+                                key={id}
+                                position={details.coordinates}
+                                icon={houseIcon}
+                                eventHandlers={{
+                                    click: async () => {
+                                        await getPropertyDetails(id);
+                                    },
+                                }}
+                            />
                         );
                     })}
+                {!!activeProperty && (
+                    <Popup
+                        position={activeProperty.details.coordinates}
+                        eventHandlers={{
+                            popupclose: () => setActiveProperty(null),
+                        }}
+                    >
+                        <div>
+                            <h2>{activeProperty.id}</h2>
+                            <p>Rent: {activeProperty.details.rent}</p>
+                            <p>
+                                Cycling:
+                                {` ${activeProperty.details.cycling.distance} metre / ${activeProperty.details.cycling.duration} seconds`}
+                            </p>
+                            <p>
+                                driving:
+                                {` ${activeProperty.details.driving.distance} metre / ${activeProperty.details.driving.duration} seconds`}
+                            </p>
+                            <p>
+                                train:
+                                {` ${activeProperty.details.train} seconds`}
+                            </p>
+                        </div>
+                    </Popup>
+                )}
 
                 <FeatureGroup>
                     <EditControl

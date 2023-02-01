@@ -1,12 +1,12 @@
 import { faker } from '@faker-js/faker';
 import { v4 as uuidv4 } from 'uuid';
 
+const cleanCoordinates = (coordinates) => {
+    return [parseFloat(coordinates[0]), parseFloat(coordinates[1])];
+};
+
 const createHouseData = () => {
     const milesRadius = 3;
-
-    const cleanCoordinates = (coordinates) => {
-        return [parseFloat(coordinates[0]), parseFloat(coordinates[1])];
-    };
 
     const mileRadiusCollection = [1, 3, 5, 10, 15];
     let houseCollection = [];
@@ -31,6 +31,7 @@ const createHouseData = () => {
                     nearestTrainStation: null,
                     nearestBusStop: null,
                 },
+                alreadyFetched: false,
             };
 
             houseCollection.push(house);
@@ -59,6 +60,7 @@ const createHouseData = () => {
                 nearestBusStop: null,
                 rent,
             },
+            alreadyFetched: false,
         };
         houseCollection.push(additionalHouse);
     });
