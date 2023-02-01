@@ -46,7 +46,6 @@ export const Map = () => {
         } else {
             setActiveProperty(property);
         }
-        console.log('property', property);
     };
 
     useEffect(() => {
@@ -152,7 +151,6 @@ export const Map = () => {
                                 eventHandlers={{
                                     click: async () => {
                                         await getPropertyDetails(id);
-                                        console.log('marker clicked');
                                     },
                                 }}
                             ></Marker>
@@ -165,7 +163,6 @@ export const Map = () => {
                             popupclose: () => setActiveProperty(null),
                         }}
                     >
-                        {console.log('popUpActive', activeProperty)}
                         <div>
                             <h2>{activeProperty.id}</h2>
                             <p>Rent: {activeProperty.details.rent}</p>

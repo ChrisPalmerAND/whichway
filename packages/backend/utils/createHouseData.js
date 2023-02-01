@@ -31,6 +31,7 @@ const createHouseData = () => {
                     nearestTrainStation: null,
                     nearestBusStop: null,
                 },
+                alreadyFetched: false,
             };
 
             houseCollection.push(house);
