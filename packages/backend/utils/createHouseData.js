@@ -59,6 +59,7 @@ const createHouseData = () => {
                 nearestBusStop: null,
                 rent,
             },
+            alreadyFetched: false,
         };
         houseCollection.push(additionalHouse);
     });

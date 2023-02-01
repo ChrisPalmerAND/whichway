@@ -21,6 +21,7 @@ export const Map = () => {
     const [polygonPoints, setPolygonPoints] = useState([]);
     const [propertiesInScope, setPropertiesInScope] = useState([]);
     const [activeProperty, setActiveProperty] = useState();
+    const [showPopUp, setShowPopUp] = useState(false);
     const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
 
     const getPropertiesWithinPolygons = async (polygonPoints) => {
@@ -32,11 +33,20 @@ export const Map = () => {
     };
 
     const getPropertyDetails = async (propertyId) => {
-        const propertyDetails = await axios.get(
-            `http://localhost:8080/api/v1/property/${propertyId}`
-        );
-        console.log('propertyDetails', propertyDetails.data);
-        setActiveProperty(propertyDetails.data);
+        const property = propertiesInScope.find((prop) => prop.id === propertyId);
+        if (!property.alreadyFetched) {
+            const { data } = await axios.get(`http://localhost:8080/api/v1/property/${propertyId}`);
+            const index = propertiesInScope.findIndex((property) => property.id === data.id);
+            setPropertiesInScope((properties) => {
+                const newProp = properties;
+                newProp[index] = { ...data, alreadyFetched: true };
+
+                return newProp;
+            });
+            setActiveProperty(propertiesInScope[index]);
+        } else {
+            setActiveProperty(property);
+        }
     };
 
     useEffect(() => {
@@ -142,16 +152,20 @@ export const Map = () => {
                                 eventHandlers={{
                                     click: async () => {
                                         await getPropertyDetails(id);
+                                        setShowPopUp(true);
                                         console.log('marker clicked');
                                     },
                                 }}
                             >
-                                {!!activeProperty && (
+                                {showPopUp && (
                                     <Popup>
-                                        {console.log(activeProperty)}
+                                        {console.log('popUpActive', activeProperty)}
                                         <div>
-                                            <h2>{id}</h2>
-                                            <p>Rent: {details.nearestTrainStation.address}</p>
+                                            <h2>{activeProperty.id}</h2>
+                                            {/* <p>
+                                                Rent:{' '}
+                                                {activeProperty.details.nearestTrainStation.address}
+                                            </p> */}
                                         </div>
                                     </Popup>
                                 )}
