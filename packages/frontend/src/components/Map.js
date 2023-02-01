@@ -1,10 +1,13 @@
-import axios from 'axios';
 import { Icon } from 'leaflet';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import 'leaflet/dist/leaflet.css';
 import React, { useEffect, useState } from 'react';
 import { FeatureGroup, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
+import {
+    getPropertiesWithinPolygonsPoints,
+    getSinglePropertyDetails,
+} from '../service/propertyService';
 /* eslint-disable react/prop-types */
 export const houseIcon = new Icon({
     iconUrl: '/images/Logo.png',
@@ -24,37 +27,23 @@ export const Map = () => {
     const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
 
     const getPropertiesWithinPolygons = async (polygonPoints) => {
-        const propertiesWithinPolygons = await axios.post('http://localhost:8080/api/v1/property', {
-            polygons: polygonPoints,
-        });
-
+        const propertiesWithinPolygons = await getPropertiesWithinPolygonsPoints(polygonPoints);
         setPropertiesInScope(propertiesWithinPolygons.data);
     };
 
     const getPropertyDetails = async (propertyId) => {
         const property = propertiesInScope.find((prop) => prop.id === propertyId);
-        console.log('property', property);
         if (!property.alreadyFetched) {
-            console.log('inside if');
-            await axios
-                .get(`http://localhost:8080/api/v1/property/${propertyId}`)
-                .then(({ data }) => {
-                    console.log('data', data);
-                    const index = propertiesInScope.findIndex(
-                        (property) => property.id === data.id
-                    );
-                    console.log('index', index);
-                    const newProp = propertiesInScope;
-                    newProp[index] = { ...data, alreadyFetched: true };
-                    console.log('newProp', newProp);
-                    setPropertiesInScope(newProp);
-                    console.log('properertiesInScope[index]', propertiesInScope[index]);
-                    setActiveProperty(propertiesInScope[index]);
-                });
+            await getSinglePropertyDetails(propertyId).then(({ data }) => {
+                const index = propertiesInScope.findIndex((property) => property.id === data.id);
+                const newProp = propertiesInScope;
+                newProp[index] = { ...data, alreadyFetched: true };
+                setPropertiesInScope(newProp);
+                setActiveProperty(propertiesInScope[index]);
+            });
         } else {
             setActiveProperty(property);
         }
-        console.log('property', property);
     };
 
     useEffect(() => {
@@ -160,10 +149,9 @@ export const Map = () => {
                                 eventHandlers={{
                                     click: async () => {
                                         await getPropertyDetails(id);
-                                        console.log('marker clicked');
                                     },
                                 }}
-                            ></Marker>
+                            />
                         );
                     })}
                 {!!activeProperty && (
@@ -173,7 +161,6 @@ export const Map = () => {
                             popupclose: () => setActiveProperty(null),
                         }}
                     >
-                        {console.log('popUpActive', activeProperty)}
                         <div>
                             <h2>{activeProperty.id}</h2>
                             <p>Rent: {activeProperty.details.rent}</p>
