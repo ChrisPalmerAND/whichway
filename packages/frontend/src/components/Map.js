@@ -168,7 +168,19 @@ export const Map = () => {
                         {console.log('popUpActive', activeProperty)}
                         <div>
                             <h2>{activeProperty.id}</h2>
-                            <p>Rent: {activeProperty.details.nearestTrainStation.address}</p>
+                            <p>Rent: {activeProperty.details.rent}</p>
+                            <p>
+                                Cycling:
+                                {` ${activeProperty.details.cycling.distance} metre / ${activeProperty.details.cycling.duration} seconds`}
+                            </p>
+                            <p>
+                                driving:
+                                {` ${activeProperty.details.driving.distance} metre / ${activeProperty.details.driving.duration} seconds`}
+                            </p>
+                            <p>
+                                train:
+                                {` ${activeProperty.details.train} seconds`}
+                            </p>
                         </div>
                     </Popup>
                 )}
