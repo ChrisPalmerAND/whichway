@@ -34,18 +34,24 @@ export const Map = () => {
     const getPropertyDetails = async (propertyId) => {
         const property = propertiesInScope.find((prop) => prop.id === propertyId);
         if (!property.alreadyFetched) {
-            const { data } = await axios.get(`http://localhost:8080/api/v1/property/${propertyId}`);
-            const index = propertiesInScope.findIndex((property) => property.id === data.id);
-            setPropertiesInScope((properties) => {
-                const newProp = properties;
-                newProp[index] = { ...data, alreadyFetched: true };
+            await axios
+                .get(`http://localhost:8080/api/v1/property/${propertyId}`)
+                .then(({ data }) => {
+                    const index = propertiesInScope.findIndex(
+                        (property) => property.id === data.id
+                    );
+                    setPropertiesInScope((properties) => {
+                        const newProp = properties;
+                        newProp[index] = { ...data, alreadyFetched: true };
 
-                return newProp;
-            });
-            setActiveProperty(propertiesInScope[index]);
+                        return newProp;
+                    });
+                    setActiveProperty(propertiesInScope[index]);
+                });
         } else {
             setActiveProperty(property);
         }
+        console.log('property', property);
     };
 
     useEffect(() => {
@@ -151,6 +157,7 @@ export const Map = () => {
                                 eventHandlers={{
                                     click: async () => {
                                         await getPropertyDetails(id);
+                                        console.log('marker clicked');
                                     },
                                 }}
                             ></Marker>
@@ -163,6 +170,7 @@ export const Map = () => {
                             popupclose: () => setActiveProperty(null),
                         }}
                     >
+                        {console.log('popUpActive', activeProperty)}
                         <div>
                             <h2>{activeProperty.id}</h2>
                             <p>Rent: {activeProperty.details.rent}</p>
