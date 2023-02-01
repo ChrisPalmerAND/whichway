@@ -5,6 +5,17 @@ import { AppBarWrapper } from './components/AppBarWrapper';
 import { DrawerWrapper } from './components/DrawerWrapper';
 import { MainWrapper } from './components/MainWrapper';
 import { Map } from './components/Map';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+    faHouse,
+    faCarSide,
+    faBicycle,
+    faTrainSubway,
+    faPersonWalking,
+    faBus,
+} from '@fortawesome/free-solid-svg-icons';
+
+library.add(faHouse, faCarSide, faBicycle, faTrainSubway, faPersonWalking, faBus);
 const drawerWidth = 320;
 
 function App() {
