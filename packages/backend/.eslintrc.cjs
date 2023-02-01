@@ -21,4 +21,8 @@ module.exports = {
     'space-before-blocks': 'error',
     'import/prefer-default-export': 'off',
   },
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 2018,
+  },
 };
