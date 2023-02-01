@@ -1,1702 +1,1702 @@
 [
   {
-    "id": "f75f4901-cbc7-40ca-adf6-ed33a8e7f21b",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8372,
-        -4.2532
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8812,
+        -4.229
       ],
-      "rent": 1006.5,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1152.61
+    },
+    "id": "7f819bac-3ab4-456c-86fa-7a1f75e07a41"
   },
   {
-    "id": "7bc41be8-5043-493d-b193-760740f4cc21",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8844,
-        -4.2464
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8845,
+        -4.2755
       ],
-      "rent": 781.71,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1024.83
+    },
+    "id": "4b3da3a8-9cbf-4f40-b613-12a021db9eed"
   },
   {
-    "id": "3efecf0d-4892-4a4e-8c91-51ae5f869b64",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8859,
-        -4.2366
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8504,
+        -4.2602
       ],
-      "rent": 1167.26,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1034.24
+    },
+    "id": "86702da7-c79a-4de2-9c00-02b79b0df921"
   },
   {
-    "id": "13262fc7-6431-43fd-8bdf-ab35155892a8",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.864,
-        -4.2288
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8554,
+        -4.2765
       ],
-      "rent": 912.62,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1040.65
+    },
+    "id": "7ff32d54-8cb0-4620-8f8f-2756399dc235"
   },
   {
-    "id": "f45911d9-ee26-4036-8b11-33260c0c2048",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8828,
-        -4.2819
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8577,
+        -4.2186
       ],
-      "rent": 1297.89,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1211.81
+    },
+    "id": "cbcd0478-c51a-49b2-9d85-43e1c34650c1"
   },
   {
-    "id": "2fda4455-ad63-4a5e-8151-1d2cafdad987",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8583,
-        -4.2591
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8947,
+        -4.226
       ],
-      "rent": 897.82,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 836.18
+    },
+    "id": "0978eb66-930f-4a36-be68-37cebd1fca95"
   },
   {
-    "id": "35d8f3fa-fffa-4bf7-b9ba-5d7524a59d3f",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8576,
-        -4.2257
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8529,
+        -4.2583
       ],
-      "rent": 1428.9,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1420.94
+    },
+    "id": "ccbbf783-26c2-4d78-928c-837bb93c2e9e"
   },
   {
-    "id": "acc8787f-99a7-4ef0-9416-8b25a42cc822",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8876,
-        -4.2718
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.825,
+        -4.2466
       ],
-      "rent": 964.12,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1473.67
+    },
+    "id": "9e634d8e-252a-407c-a509-1983095e7741"
   },
   {
-    "id": "93f0f387-269b-4dac-bd78-05c93d800056",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8888,
-        -4.2584
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8684,
+        -4.2126
       ],
-      "rent": 842.86,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 899.38
+    },
+    "id": "442b87cc-8384-4e2a-99ca-62aa6bef8ea1"
   },
   {
-    "id": "70bcb7b7-e339-4611-b092-fb4e3b3d261d",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8627,
+        -4.2154
+      ],
+      "rent": 1438.42
+    },
+    "id": "e5a212e8-744c-4de1-bc13-2c75e06363ee"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
         55.8795,
-        -4.2498
+        -4.2443
       ],
-      "rent": 439.72,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1267.81
+    },
+    "id": "e29cce33-cef6-45af-b33c-18ca7f4d5994"
   },
   {
-    "id": "ac14972e-2bf9-4e23-925a-22ca2925ac5d",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8488,
-        -4.2322
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8287,
+        -4.2399
       ],
-      "rent": 1474.33,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1400.83
+    },
+    "id": "415d70dd-2eed-4853-8d2c-e26ce0ea5da1"
   },
   {
-    "id": "79a3210c-25b8-43fe-ab55-7636407a59a2",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8819,
-        -4.2729
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8807,
+        -4.2259
       ],
-      "rent": 874.3,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1146.98
+    },
+    "id": "9206375e-dd12-4d4e-949e-689bcceccc57"
   },
   {
-    "id": "ed289c2c-61b0-47fd-a001-7a92db1a7cd0",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8632,
-        -4.2874
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8641,
+        -4.2419
       ],
-      "rent": 854.23,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 422.95
+    },
+    "id": "4996a06f-349f-4b0d-bd4c-265413d19179"
   },
   {
-    "id": "c24ecc60-d71a-4bf9-b445-986492368b3c",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8794,
-        -4.2681
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.9007,
+        -4.235
       ],
-      "rent": 1330.14,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 662.7
+    },
+    "id": "2707b1b8-5de8-4b7e-841b-162852983822"
   },
   {
-    "id": "56c53c3f-c469-4314-ac01-fd8e766bb045",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8609,
-        -4.2282
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8777,
+        -4.2417
       ],
-      "rent": 433.85,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1228.1
+    },
+    "id": "26428bfa-2ee2-4334-a8c5-76c7dd43e387"
   },
   {
-    "id": "9c988115-7f6f-4236-a536-2ad3c551a340",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8714,
-        -4.2668
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8461,
+        -4.2579
       ],
-      "rent": 892.36,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 491.95
+    },
+    "id": "2093d8e9-f826-4c04-a779-1f6218e41aac"
   },
   {
-    "id": "4f145ed2-33b9-4ebd-94b2-70f08e30bd59",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.864,
-        -4.2546
-      ],
-      "rent": 405.78,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "b2fa92ae-677e-4fd4-9d43-e64a189f7750",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8353,
-        -4.2846
-      ],
-      "rent": 1435.88,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "8565772b-38b6-45df-bdc2-cf0a8f9dc0b8",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8737,
-        -4.2624
-      ],
-      "rent": 1162.49,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "8fa253d0-33f9-4b3d-a1fa-4729f11553c8",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8646,
-        -4.2293
-      ],
-      "rent": 793.74,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "7da19c0b-a666-4edb-9659-c786c84faf47",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8371,
-        -4.2215
-      ],
-      "rent": 499.96,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "06af8721-1976-45a8-aca0-2a0731af3530",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8789,
-        -4.2534
-      ],
-      "rent": 883.68,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "6ddafea8-49a2-4e07-bb0f-4145e59df69f",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8382,
-        -4.2823
-      ],
-      "rent": 694.77,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "10c1eddf-9953-4fc5-8cce-530c75ac2679",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8729,
-        -4.2359
-      ],
-      "rent": 775.35,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "18a64b97-edea-4379-9b07-0f9c6750531d",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8659,
-        -4.2658
-      ],
-      "rent": 688.82,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "0578df0f-553a-4ee2-940d-8f003e2cc875",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8202,
-        -4.2525
-      ],
-      "rent": 534.47,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "bbfaa48b-8fa7-4a4c-9dc5-452c10211d95",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8632,
-        -4.246
-      ],
-      "rent": 1044.6,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "7d4a6ec9-40fd-4098-b1b1-edc765ca8f66",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8563,
-        -4.2304
-      ],
-      "rent": 1429.21,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "d294d464-e0a7-41fe-b73f-28d7ec1173e9",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8692,
-        -4.2526
-      ],
-      "rent": 1091.56,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "ddb3fe66-49ea-45ff-8811-896dcda862ba",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8511,
-        -4.2615
-      ],
-      "rent": 846.67,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "390fe380-33f3-4343-b9aa-d5b7333e5bcc",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8897,
-        -4.2532
-      ],
-      "rent": 1268.36,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "c4872f61-9430-4cfb-8a28-a8176edfcac2",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8618,
-        -4.2505
-      ],
-      "rent": 1287.98,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "f1bc3c82-ed5b-4772-9d13-6c72f461a0a3",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8607,
-        -4.2515
-      ],
-      "rent": 614.97,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "5992881e-d2c9-46d4-a028-55c2b2581d5b",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8284,
-        -4.2316
-      ],
-      "rent": 1355.07,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "0c050786-1166-4b32-820c-5d137ade5944",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8527,
-        -4.2441
-      ],
-      "rent": 953.73,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "19ff8e2f-19a5-443c-b333-23bac8756389",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8202,
-        -4.2538
-      ],
-      "rent": 1144.75,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "1edc99e4-6350-4938-af2d-17f5136cb57b",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8607,
-        -4.2835
-      ],
-      "rent": 1062.08,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "f20f11ba-1f10-4493-b6a7-4362a39791b4",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8609,
-        -4.2504
-      ],
-      "rent": 742.53,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "8c6e2c15-8269-4894-a277-2b610f55c0df",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8755,
-        -4.242
-      ],
-      "rent": 1142.65,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "6717d38a-16dd-4b51-8ecc-fe06ffdc15d7",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8834,
-        -4.2413
-      ],
-      "rent": 1176.06,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "bbdb9c2c-db83-474b-b8ab-9e6f872c349f",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8734,
-        -4.2754
-      ],
-      "rent": 1170.84,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "561dade1-b867-4d52-a306-2c3be626158c",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8917,
-        -4.2297
-      ],
-      "rent": 1233.71,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "f165a611-4e8d-47e1-989f-fc99e84bc8b4",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.875,
-        -4.2268
-      ],
-      "rent": 1323.33,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "462532fa-469e-4460-a9ce-cba8a0368023",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8407,
-        -4.2127
-      ],
-      "rent": 1140.78,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "8dc936bc-5469-472a-ac44-6100c19d9503",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8644,
-        -4.2546
-      ],
-      "rent": 1020.31,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "ac79bfa7-434c-4817-94be-9debeaa82846",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8611,
-        -4.2496
-      ],
-      "rent": 896.22,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "0fbce91b-8347-4ad6-9862-b4bc69b4c487",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8729,
-        -4.2768
-      ],
-      "rent": 1162.21,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "d4b1e3bd-66bb-42c6-8cc5-587c8888ec69",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8286,
-        -4.245
-      ],
-      "rent": 1465.62,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "dea75855-097b-4415-9329-9f4cccbaa7e5",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.848,
-        -4.2718
-      ],
-      "rent": 603.14,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "808298d1-c2bb-4036-813f-89126048a8a0",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8602,
-        -4.2933
-      ],
-      "rent": 1038.42,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "bd1d1d1f-3f6b-45a5-ad02-e05b7176d218",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8683,
-        -4.2271
-      ],
-      "rent": 791.36,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "366580c2-26cc-4532-9682-52a3fc601910",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8254,
-        -4.2728
-      ],
-      "rent": 1036.95,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "a6ef0289-262f-459c-ab3c-f73c7a3a8591",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8884,
-        -4.2511
-      ],
-      "rent": 1219.83,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "ce09f2d0-6f27-4b2d-bf88-612146f4ca0e",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8468,
-        -4.2582
-      ],
-      "rent": 1024.73,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "18423b41-d089-44b1-a2fa-53dba2f31cca",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8852,
-        -4.2263
-      ],
-      "rent": 1411.11,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "2d672b86-67a3-4721-87fc-42261143c4de",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8515,
-        -4.266
-      ],
-      "rent": 1344.43,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "2529c7f1-c177-4bde-886b-261ba0096463",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.834,
-        -4.2497
-      ],
-      "rent": 1171.91,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "7dbab476-44db-4e09-9165-4164986621b9",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8738,
-        -4.2642
-      ],
-      "rent": 1405.79,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "dac1832e-79db-4f3e-90c3-462211e48021",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8589,
-        -4.2589
-      ],
-      "rent": 557.12,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "59563fab-152c-476f-890e-573d2a7a5357",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8775,
-        -4.2217
-      ],
-      "rent": 633.06,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "9a02a1b1-f07f-4e2a-9684-93ad14995221",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.902,
-        -4.2401
-      ],
-      "rent": 1211.26,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "09ef89c6-787b-4a5d-8698-2d674e3d958e",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8623,
-        -4.2482
-      ],
-      "rent": 1011.34,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "704826c2-63e2-45a8-b481-939075243e27",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8853,
-        -4.2844
-      ],
-      "rent": 1274.88,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "0fc27e58-1a74-440a-aef4-ab0163d0dfd9",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8673,
-        -4.2543
-      ],
-      "rent": 1005.12,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "6870a7dd-7ec9-4e19-b95d-9cb1134f4b15",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8338,
-        -4.2582
-      ],
-      "rent": 1298.76,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "2fa9aaba-3c02-4d53-bec2-35955fa43927",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8321,
-        -4.2247
-      ],
-      "rent": 591.96,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "0e7ba9ab-3c68-4a28-9a32-f979e49a45c8",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8787,
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8655,
         -4.2517
       ],
-      "rent": 963.36,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 932.99
+    },
+    "id": "67bdc010-9c31-4939-96a0-9300aa775328"
   },
   {
-    "id": "958d9bfb-e4a3-4cfe-a35c-1c08bf15e14f",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.85,
+        -4.2246
+      ],
+      "rent": 684.53
+    },
+    "id": "2c5aa4ba-40eb-41cd-ab4c-9a73300d3525"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8634,
+        -4.2774
+      ],
+      "rent": 1107.68
+    },
+    "id": "418fcc08-3547-4499-b78f-766439dbd16a"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8806,
+        -4.2447
+      ],
+      "rent": 1130.98
+    },
+    "id": "6e6f16ab-24ef-4aa4-af93-4d490062df82"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.879,
+        -4.2195
+      ],
+      "rent": 1354.24
+    },
+    "id": "dad935f7-ab5d-4f8c-aa83-f39760b42d2c"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8664,
+        -4.2878
+      ],
+      "rent": 718.95
+    },
+    "id": "30a9e5aa-6c4e-4715-8c1d-e90638e89274"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8576,
+        -4.2405
+      ],
+      "rent": 461.47
+    },
+    "id": "00616ccc-0bc2-4418-bd62-874fcd9b9ec3"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8674,
+        -4.2538
+      ],
+      "rent": 911.06
+    },
+    "id": "8cadaabd-0715-42a9-bc67-766ce5c2415a"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8441,
+        -4.2341
+      ],
+      "rent": 511.87
+    },
+    "id": "5b15d84c-36ab-4f88-aa83-9db9f2e9aaf3"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8449,
+        -4.2839
+      ],
+      "rent": 1267.31
+    },
+    "id": "3111422b-ebca-43da-b832-1477ceb09d05"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
         55.8595,
-        -4.2495
+        -4.2515
       ],
-      "rent": 1368.44,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1402.74
+    },
+    "id": "d7745b4a-5712-4dd1-bc07-692d0bf8aa82"
   },
   {
-    "id": "1d85fcd7-49e5-4bc6-a5e1-800fe86340fb",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8824,
-        -4.2303
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8649,
+        -4.2459
       ],
-      "rent": 1112.79,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 433.07
+    },
+    "id": "da4a875d-30e9-43e0-9342-0bb432165bb6"
   },
   {
-    "id": "f061c4ca-1ce3-42e1-a526-499aca35517b",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8472,
-        -4.275
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8616,
+        -4.2486
       ],
-      "rent": 1144.57,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 620.44
+    },
+    "id": "a5e6c519-a4ed-487a-9e4f-2c2abec578dd"
   },
   {
-    "id": "842526ba-5640-4144-a846-8423b58533f2",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8524,
-        -4.2635
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8922,
+        -4.2493
       ],
-      "rent": 984.79,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 513.31
+    },
+    "id": "43f599f9-abc9-4bfa-8a98-e9bb32798da0"
   },
   {
-    "id": "00afd847-bdfc-4165-8020-d29fed319bec",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.854,
-        -4.2691
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8378,
+        -4.2441
       ],
-      "rent": 1233.94,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1280.02
+    },
+    "id": "e6cc261a-fa15-4348-aae2-29c6db6a9ab5"
   },
   {
-    "id": "54846412-5c68-4978-9490-d770d67961fe",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8807,
-        -4.2578
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8319,
+        -4.2405
       ],
-      "rent": 959.57,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 818.97
+    },
+    "id": "376d4c30-826e-4141-871e-4cf98b73403e"
   },
   {
-    "id": "63052574-ad2d-45ab-9029-f85d66ce8a36",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8594,
-        -4.2551
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8585,
+        -4.2149
       ],
-      "rent": 1107.9,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1259.66
+    },
+    "id": "4515dde1-d298-47c8-97e8-5a67c229d6b5"
   },
   {
-    "id": "4dcf54df-e60d-495a-bebe-95bc2966a0c6",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8614,
-        -4.2504
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8631,
+        -4.243
       ],
-      "rent": 948.95,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1403.72
+    },
+    "id": "b4da4031-92e6-4688-98f3-445eeda89c34"
   },
   {
-    "id": "273a20a5-31b5-4119-b431-0d982e2acabe",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8558,
-        -4.2456
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8707,
+        -4.2423
       ],
-      "rent": 1288.76,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 488.49
+    },
+    "id": "27f5a1d5-795a-4b64-a847-4913e0941740"
   },
   {
-    "id": "e87886fc-d384-4f8d-a012-260506d195de",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8613,
-        -4.2505
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8579,
+        -4.251
       ],
-      "rent": 1010.4,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 555.4
+    },
+    "id": "a029b9f8-800f-43ed-906a-aa7de8f4b8ed"
   },
   {
-    "id": "f2333994-1ab7-46d7-8aae-24b8f6a1cb3d",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8304,
-        -4.2576
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8606,
+        -4.252
       ],
-      "rent": 902.84,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1401.99
+    },
+    "id": "f1e600fa-1692-4dd7-b54f-abf386b4cf74"
   },
   {
-    "id": "fe901a3c-6c7e-456f-a5b9-1f423d22efec",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8526,
-        -4.254
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8653,
+        -4.223
       ],
-      "rent": 824.48,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 885.8
+    },
+    "id": "97e28f8f-ae75-4a9f-8c47-388edf71c6d3"
   },
   {
-    "id": "8eb569e0-f2c7-4bda-9888-c2caec60a75c",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8255,
-        -4.2631
-      ],
-      "rent": 775.37,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "7e3611a9-99aa-4ae6-9acb-fd61d206ec40",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8724,
-        -4.2722
-      ],
-      "rent": 1014.38,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "9680ee0d-e033-411f-82a7-18507851cdbc",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8604,
-        -4.2578
-      ],
-      "rent": 764.98,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "98544498-84c5-4597-91d2-2145c9d5e2a7",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.868,
-        -4.2611
-      ],
-      "rent": 948.73,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "e47c5a0d-8823-4d5c-80ae-1e0aa23dd4c8",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8712,
-        -4.2529
-      ],
-      "rent": 1066.6,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "ee6abd3d-cd53-45b0-85f8-00b365e55011",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8612,
-        -4.2503
-      ],
-      "rent": 915.48,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "5040bbfa-07ad-4883-870b-c8d7da71717b",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8801,
-        -4.2265
-      ],
-      "rent": 988.72,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "7f32f2e8-498d-4f71-93a5-92c30caaa04c",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8528,
-        -4.2427
-      ],
-      "rent": 567.42,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "3201fe5f-1956-4ea2-9838-cfaa28a9fa70",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8681,
-        -4.2391
-      ],
-      "rent": 1081.13,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "c5f91d23-62a8-4fa5-badd-44cdbe2b2692",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.829,
-        -4.2533
-      ],
-      "rent": 411.67,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "565692ea-5d72-43f9-b311-736774d325db",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8852,
-        -4.2253
-      ],
-      "rent": 1347.26,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "2c1ebbfc-c91f-4954-aeff-67a89aa16022",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8618,
-        -4.2484
-      ],
-      "rent": 1355.1,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "35a338c6-2cb2-4015-937f-943f258ff501",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8518,
-        -4.2452
-      ],
-      "rent": 1446.6,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "2c19ad91-4624-44e9-8c63-c520788ffc0f",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.852,
-        -4.286
-      ],
-      "rent": 582.49,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "b27adc82-4980-4467-b834-4b5fc6e9a5a9",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8798,
-        -4.2539
-      ],
-      "rent": 1287.23,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "a94aa851-0312-4347-8546-613bcd8de5ff",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8475,
-        -4.2673
-      ],
-      "rent": 818.07,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
-  },
-  {
-    "id": "7615a957-9db5-452e-88f2-9e488db4de24",
-    "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8622,
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8671,
         -4.2439
       ],
-      "rent": 1008.86,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 629.53
+    },
+    "id": "14ad350c-27d6-4d4d-bdde-92dab0490fcc"
   },
   {
-    "id": "e997e1bd-f1f9-41ca-8b3b-b3f41505d59f",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8738,
-        -4.2373
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8865,
+        -4.2264
       ],
-      "rent": 1410.36,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 990.97
+    },
+    "id": "4e41bd06-8ad2-4d30-96a5-9521b49cfa73"
   },
   {
-    "id": "b56408eb-7159-47b2-93d0-5a2286c45a6e",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8739,
-        -4.2428
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8654,
+        -4.2482
       ],
-      "rent": 808.94,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1388.69
+    },
+    "id": "eaeccd7c-5655-4de5-82f4-f22ea7bd6361"
   },
   {
-    "id": "103da6bb-2f66-4f1e-91e6-00517977e22f",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.897,
-        -4.2449
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8981,
+        -4.2299
       ],
-      "rent": 815.65,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1054.25
+    },
+    "id": "e90d3483-5b67-4ad8-902b-518967013c5b"
   },
   {
-    "id": "e5fec169-10f8-4970-822d-ff7be52ec959",
     "details": {
-      "milesFromWork": null,
-      "workCoordinates": [
-        55.8354,
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8828,
+        -4.2635
+      ],
+      "rent": 1216.05
+    },
+    "id": "0591fdc8-11cd-4648-83e5-09b5f04c7ff9"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8829,
+        -4.2426
+      ],
+      "rent": 1499.3
+    },
+    "id": "9724b1fb-ef8c-4630-98d8-3fa98346f478"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8545,
+        -4.2455
+      ],
+      "rent": 503.69
+    },
+    "id": "bb7fc0dc-fba7-4530-ab5d-d0cf6c8c3369"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8709,
+        -4.2648
+      ],
+      "rent": 819.24
+    },
+    "id": "fd91498b-9ec0-405d-b10c-c856758b062c"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8765,
+        -4.2554
+      ],
+      "rent": 886.42
+    },
+    "id": "177d13da-5f36-4c57-bb1c-3f67b2bd8f5a"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8713,
+        -4.252
+      ],
+      "rent": 677.61
+    },
+    "id": "4b48f007-8c3a-4929-89c9-ef58b0bcd4d6"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8559,
+        -4.2319
+      ],
+      "rent": 1413.9
+    },
+    "id": "158a9a20-ab56-4153-ae91-b60c66aa3fd9"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8418,
+        -4.2597
+      ],
+      "rent": 1425.25
+    },
+    "id": "0c080c85-68ec-476f-9627-54429eff31a0"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8411,
+        -4.2349
+      ],
+      "rent": 523.65
+    },
+    "id": "f1814fc2-6806-4ab6-a431-a17b3f12bb98"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8613,
+        -4.2504
+      ],
+      "rent": 936.55
+    },
+    "id": "353204ad-624b-4543-93e3-17c0a496c5b1"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8573,
+        -4.2266
+      ],
+      "rent": 790.75
+    },
+    "id": "b085180e-d538-4988-81c4-8b59a83e8f1e"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8318,
+        -4.2633
+      ],
+      "rent": 1089.77
+    },
+    "id": "93571b7d-863c-436c-9157-f744fff3ffa8"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8785,
+        -4.2687
+      ],
+      "rent": 815.01
+    },
+    "id": "d6a14576-d09f-40e8-ab50-2ceeac05e496"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8709,
+        -4.2469
+      ],
+      "rent": 502.43
+    },
+    "id": "1cfc1b6f-336c-43fb-8f6d-c803cb1adbed"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8388,
+        -4.2267
+      ],
+      "rent": 676.75
+    },
+    "id": "a4e43468-d8f8-4021-bbd3-6a66341935fa"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8526,
+        -4.2537
+      ],
+      "rent": 928.48
+    },
+    "id": "c94ea48e-cd88-4c76-bac5-c8bf3b19798d"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8572,
+        -4.2666
+      ],
+      "rent": 520.31
+    },
+    "id": "ea84a497-320c-4ad4-b99f-c685906bad17"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8859,
+        -4.2497
+      ],
+      "rent": 1446.1
+    },
+    "id": "81bcb8d4-393a-44c0-8afe-b6fec0415a76"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8888,
+        -4.2488
+      ],
+      "rent": 613.51
+    },
+    "id": "cf8809a1-fb02-47e6-b5fb-bfdc0594ecb2"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8481,
+        -4.2522
+      ],
+      "rent": 694.57
+    },
+    "id": "4f1de96a-5d92-4c8f-86a8-91c6535b1eb7"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8624,
+        -4.2509
+      ],
+      "rent": 502.46
+    },
+    "id": "0bb2dc47-4db7-41ac-b453-c57e489b3107"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8459,
+        -4.2668
+      ],
+      "rent": 1378.34
+    },
+    "id": "c973e613-a681-45a4-8bc3-aceeb548fc8f"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8382,
+        -4.2499
+      ],
+      "rent": 725.91
+    },
+    "id": "47e860f4-fdbb-45ce-ac64-4a1a42a6855f"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8799,
+        -4.2266
+      ],
+      "rent": 1355.67
+    },
+    "id": "0782dd69-def7-4da4-b49b-0e840b003abe"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8901,
+        -4.2235
+      ],
+      "rent": 540.25
+    },
+    "id": "3bcaca46-a7ab-4747-abbd-cda62d34192b"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.845,
+        -4.2474
+      ],
+      "rent": 1031.97
+    },
+    "id": "ca58a324-abcd-4f37-8c35-63643489df96"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8534,
+        -4.2546
+      ],
+      "rent": 401.38
+    },
+    "id": "f3bdcf31-3c18-42ea-9f34-affbbfd505d9"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8609,
+        -4.2374
+      ],
+      "rent": 520.98
+    },
+    "id": "d0b26eb5-7518-4a66-97d2-5ed8c018be52"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8301,
+        -4.2416
+      ],
+      "rent": 698.8
+    },
+    "id": "7b2c2953-1d63-4b55-87ae-394a622b07ff"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8863,
+        -4.2349
+      ],
+      "rent": 985.01
+    },
+    "id": "80747663-e79e-406f-83ba-6cc972ee276b"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8625,
+        -4.276
+      ],
+      "rent": 1071.37
+    },
+    "id": "2d4b44f2-2c70-494b-965f-e39b7e33df1a"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8509,
+        -4.2608
+      ],
+      "rent": 1170.15
+    },
+    "id": "8923f85f-c29b-4d73-afdc-0e62699ed9be"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8475,
+        -4.2538
+      ],
+      "rent": 568
+    },
+    "id": "3638fb96-8646-4900-a86b-1500f9d9b994"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8575,
+        -4.2607
+      ],
+      "rent": 645
+    },
+    "id": "51a41207-a253-4cb9-83ff-5ef1340cff15"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8874,
+        -4.2396
+      ],
+      "rent": 1057.77
+    },
+    "id": "6502d9b5-3340-4864-8fda-8cfffc8f2dd3"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8687,
+        -4.2661
+      ],
+      "rent": 1327.37
+    },
+    "id": "477c744c-89b0-4643-a712-aebe3b34c06b"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8939,
+        -4.2571
+      ],
+      "rent": 1104.74
+    },
+    "id": "150bf275-3a38-4a49-971d-a6a68989125d"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8605,
+        -4.2884
+      ],
+      "rent": 1124.82
+    },
+    "id": "9ccb3715-fc32-4835-9204-927d8d4464b2"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.832,
         -4.2553
       ],
-      "rent": 986.98,
-      "timeToDrive": null,
-      "timeToCycle": null,
-      "timeToWalk": null,
-      "nearestTrainStation": null,
-      "nearestBusStop": null,
-      "averageRent": null
-    }
+      "rent": 1445.61
+    },
+    "id": "8c575bc8-89b4-43f6-9e4b-0c7e372655e0"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8821,
+        -4.2787
+      ],
+      "rent": 1359.35
+    },
+    "id": "192e3f54-f8e6-41b8-aaad-fab5baab770b"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8405,
+        -4.245
+      ],
+      "rent": 511.96
+    },
+    "id": "f90bcba1-cc1e-4daa-98fe-7271b21a27a0"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.869,
+        -4.2559
+      ],
+      "rent": 973.85
+    },
+    "id": "79fe999b-b18b-44a9-adf8-56897f3b7e6a"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8545,
+        -4.22
+      ],
+      "rent": 1316.16
+    },
+    "id": "37ee9702-8ba3-4925-a4f7-977aed05f24e"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8844,
+        -4.259
+      ],
+      "rent": 1314.59
+    },
+    "id": "2967ce0d-cc87-420b-831a-a492bece87a3"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8792,
+        -4.2332
+      ],
+      "rent": 1415.02
+    },
+    "id": "27ecc122-ec35-4ca0-87f2-bb23a2800101"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8671,
+        -4.2485
+      ],
+      "rent": 1401.49
+    },
+    "id": "5b55f916-7a27-4a2a-ba11-527443c87bcb"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8275,
+        -4.2452
+      ],
+      "rent": 1226.92
+    },
+    "id": "cb22a0da-93ec-4163-b667-688347d1e68d"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.883,
+        -4.2857
+      ],
+      "rent": 1432.21
+    },
+    "id": "e839306d-535c-4b47-8d4b-d24a645c4184"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8605,
+        -4.2528
+      ],
+      "rent": 561.9
+    },
+    "id": "d64c2bc8-f96b-437d-8753-9fd7e11e43a2"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8763,
+        -4.2365
+      ],
+      "rent": 1413.24
+    },
+    "id": "b522bebb-73a0-4398-9ea1-0db9e6e88ec6"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8556,
+        -4.2684
+      ],
+      "rent": 873.3
+    },
+    "id": "2fba06bd-dea5-45c9-9ba2-6aa067755788"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8488,
+        -4.2731
+      ],
+      "rent": 1252.65
+    },
+    "id": "d8fef7cb-7c48-4146-bdcd-441946e3f59c"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8578,
+        -4.242
+      ],
+      "rent": 904.8
+    },
+    "id": "2a6a2a04-4c60-4bd9-bfcf-7d47f847d914"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8477,
+        -4.2165
+      ],
+      "rent": 784.21
+    },
+    "id": "fbb3a324-0acd-4657-b0cb-d770686d59fe"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8606,
+        -4.2383
+      ],
+      "rent": 1154.86
+    },
+    "id": "1cc0b681-1fef-472a-952a-c3513bce9dcf"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8413,
+        -4.2463
+      ],
+      "rent": 1083.23
+    },
+    "id": "66736c7a-7608-4408-a00f-0ef5221b8d3a"
+  },
+  {
+    "details": {
+      "cycling": null,
+      "walking": null,
+      "train": null,
+      "bus": null,
+      "nearestTrainStation": [],
+      "nearestBusStop": [],
+      "driving": null,
+      "coordinates": [
+        55.8223,
+        -4.2451
+      ],
+      "rent": 1464.94
+    },
+    "id": "db4d5024-fd52-43de-990c-4db317b7395b"
   }
 ]
