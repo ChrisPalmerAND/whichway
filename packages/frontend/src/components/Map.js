@@ -21,7 +21,6 @@ export const Map = () => {
     const [polygonPoints, setPolygonPoints] = useState([]);
     const [propertiesInScope, setPropertiesInScope] = useState([]);
     const [activeProperty, setActiveProperty] = useState();
-    const [showPopUp, setShowPopUp] = useState(false);
     const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
 
     const getPropertiesWithinPolygons = async (polygonPoints) => {
@@ -47,6 +46,7 @@ export const Map = () => {
         } else {
             setActiveProperty(property);
         }
+        console.log('property', property);
     };
 
     useEffect(() => {
@@ -152,26 +152,26 @@ export const Map = () => {
                                 eventHandlers={{
                                     click: async () => {
                                         await getPropertyDetails(id);
-                                        setShowPopUp(true);
                                         console.log('marker clicked');
                                     },
                                 }}
-                            >
-                                {showPopUp && (
-                                    <Popup>
-                                        {console.log('popUpActive', activeProperty)}
-                                        <div>
-                                            <h2>{activeProperty.id}</h2>
-                                            {/* <p>
-                                                Rent:{' '}
-                                                {activeProperty.details.nearestTrainStation.address}
-                                            </p> */}
-                                        </div>
-                                    </Popup>
-                                )}
-                            </Marker>
+                            ></Marker>
                         );
                     })}
+                {!!activeProperty && (
+                    <Popup
+                        position={activeProperty.details.coordinates}
+                        eventHandlers={{
+                            popupclose: () => setActiveProperty(null),
+                        }}
+                    >
+                        {console.log('popUpActive', activeProperty)}
+                        <div>
+                            <h2>{activeProperty.id}</h2>
+                            <p>Rent: {activeProperty.details.nearestTrainStation.address}</p>
+                        </div>
+                    </Popup>
+                )}
 
                 <FeatureGroup>
                     <EditControl
