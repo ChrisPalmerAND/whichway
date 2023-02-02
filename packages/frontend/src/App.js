@@ -21,6 +21,8 @@ const drawerWidth = 320;
 function App() {
     const theme = useTheme();
     const [open, setOpen] = React.useState(true);
+    // eslint-disable-next-line no-unused-vars
+    const [rentValues, setRentValues] = React.useState([350, 1250]);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -44,7 +46,7 @@ function App() {
                 drawerWidth={drawerWidth}
             />
             <MainWrapper open={open} drawerWidth={drawerWidth}>
-                <Map />
+                <Map rentValues={rentValues} />
             </MainWrapper>
         </Box>
     );

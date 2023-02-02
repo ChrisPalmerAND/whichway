@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import * as React from 'react';
 
-function valuetext(value) {
-    return `£ ${value}`;
+function valuetext(rentValues) {
+    return `£ ${rentValues}`;
 }
 
 const marks = [
@@ -28,21 +28,14 @@ const marks = [
 ];
 
 export default function RangeSlider() {
-    const [value, setValue] = React.useState([0, 2000]);
+    const [rentValues, setRentValues] = React.useState([0, 2000]);
 
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+        setRentValues(newValue);
         console.log('newValue', newValue);
     };
 
     return (
-        // <Box sx={{ width: 300, marginTop: '300px' }}>
-        //     <Typography id="input-slider" gutterBottom>
-        //         Rent
-        //     </Typography>
-        //     {/* <CurrencyPoundOutlinedIcon /> */}
-
-        // </Box>
         <Box sx={{ width: 250, justifyContent: 'right' }}>
             <Typography id="input-slider" gutterBottom>
                 Rent
@@ -54,7 +47,7 @@ export default function RangeSlider() {
                 <Grid item xs>
                     <Slider
                         getAriaLabel={() => 'Temperature range'}
-                        value={value}
+                        value={rentValues}
                         onChange={handleChange}
                         valueLabelDisplay="auto"
                         getAriaValueText={valuetext}
