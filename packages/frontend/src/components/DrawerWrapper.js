@@ -23,7 +23,7 @@ export const DrawerWrapper = ({
     drawerWidth,
 }) => {
     const [openFilters, setOpenFilter] = React.useState(true);
-    const [openInfo, setOpenInfo] = React.useState(true);
+    const [openInfo, setOpenInfo] = React.useState(false);
 
     const handleClickFilters = () => {
         setOpenFilter(!openFilters);
