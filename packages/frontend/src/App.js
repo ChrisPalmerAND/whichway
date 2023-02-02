@@ -43,6 +43,8 @@ function App() {
                 open={open}
                 theme={theme}
                 handleDrawerClose={handleDrawerClose}
+                rentValues={rentValues}
+                setRentValues={setRentValues}
                 drawerWidth={drawerWidth}
             />
             <MainWrapper open={open} drawerWidth={drawerWidth}>

@@ -14,7 +14,14 @@ import { styled } from '@mui/material/styles';
 import React from 'react';
 import RangeSlider from './Slider';
 /* eslint-disable react/prop-types */
-export const DrawerWrapper = ({ open, theme, handleDrawerClose, drawerWidth }) => {
+export const DrawerWrapper = ({
+    rentValues,
+    setRentValues,
+    open,
+    theme,
+    handleDrawerClose,
+    drawerWidth,
+}) => {
     const [openFilters, setOpenFilter] = React.useState(true);
     const [openInfo, setOpenInfo] = React.useState(true);
 
@@ -75,7 +82,7 @@ export const DrawerWrapper = ({ open, theme, handleDrawerClose, drawerWidth }) =
                 <Collapse in={openFilters} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                         <ListItemButton sx={{ pl: 5 }}>
-                            <RangeSlider />
+                            <RangeSlider rentValues={rentValues} setRentValues={setRentValues} />
                         </ListItemButton>
                     </List>
                 </Collapse>

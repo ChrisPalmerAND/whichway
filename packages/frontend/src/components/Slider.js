@@ -27,9 +27,7 @@ const marks = [
     },
 ];
 
-export default function RangeSlider() {
-    const [rentValues, setRentValues] = React.useState([0, 2000]);
-
+export default function RangeSlider({ rentValues, setRentValues }) {
     const handleChange = (event, newValue) => {
         setRentValues(newValue);
         console.log('newValue', newValue);
