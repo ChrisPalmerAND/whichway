@@ -16,19 +16,19 @@ export const PopUpWrapper = ({ details, setActiveProperty }) => {
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-car-side" /> Driving:
-                    {` ${details.driving.distance} metres / ${details.driving.duration} seconds`}
+                    {` ${details.driving.distance} miles / ${details.driving.duration} (HH:MM:SS)`}
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-bicycle" /> Cycling:
-                    {` ${details.cycling.distance} metres / ${details.cycling.duration} seconds`}
+                    {` ${details.cycling.distance} miles / ${details.cycling.duration} (HH:MM:SS)`}
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-person-walking" /> Walking:
-                    {` ${details.driving.distance} metres / ${details.driving.duration} seconds`}
+                    {` ${details.walking.distance} miles / ${details.walking.duration} (HH:MM:SS)`}
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-train-subway" /> Train:
-                    {` ${details.bus} metres`}
+                    {` ${details.train} (HH:MM:SS)`}
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-train-subway" /> Nearest Train Station:
@@ -36,7 +36,7 @@ export const PopUpWrapper = ({ details, setActiveProperty }) => {
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-bus" /> Bus:
-                    {` ${details.train} metres`}
+                    {` ${details.bus} (HH:MM:SS)`}
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-bus" /> Nearest Bus Stop:

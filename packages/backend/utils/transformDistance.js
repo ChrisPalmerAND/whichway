@@ -1,4 +1,5 @@
 const transformDistance = (distance) => {
-    return distance / 1600;
+    const calculatedDistance = distance / 1600;
+    return calculatedDistance.toFixed(2);
 };
 export default transformDistance;

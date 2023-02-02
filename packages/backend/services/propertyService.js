@@ -8,6 +8,8 @@ import {
     POINTS_OF_INTEREST,
 } from '../utils/constants.js';
 import { allProperties } from '../utils/properties.js';
+import transformDistance from '../utils/transformDistance.js';
+import transformTime from '../utils/transformTime.js';
 dotenv.config();
 const token = process.env.MAPBOX_TOKEN;
 
@@ -78,6 +80,8 @@ const calculateTravelToWork = async (property) => {
     const endCoordinates = AND_DIGITAL_COORDINATES;
 
     const startCoordinates = [property.details.coordinates[1], property.details.coordinates[0]];
+    let drivingDurationUnformatted;
+    let drivingDistanceUnformatted;
 
     for (const methodOfTravel of METHODS_OF_TRAVEL) {
         const distanceAndDurationData = await getDirections(
@@ -85,19 +89,25 @@ const calculateTravelToWork = async (property) => {
             endCoordinates,
             methodOfTravel,
         );
+
+        if (methodOfTravel === 'driving') {
+            drivingDurationUnformatted = distanceAndDurationData[0].duration;
+            drivingDistanceUnformatted = distanceAndDurationData[0].distance;
+        }
+
         property.details[methodOfTravel] = {
-            distance: distanceAndDurationData[0].distance,
-            duration: distanceAndDurationData[0].duration,
+            distance: transformDistance(distanceAndDurationData[0].distance),
+            duration: transformTime(distanceAndDurationData[0].duration),
         };
     }
 
     property.details['bus'] = calculateBusDuration(
-        property.details.driving.distance,
-        property.details.driving.duration,
+        drivingDistanceUnformatted,
+        drivingDurationUnformatted,
     );
     property.details['train'] = calculateTrainDuration(
-        property.details.driving.distance,
-        property.details.driving.duration,
+        drivingDistanceUnformatted,
+        drivingDurationUnformatted,
     );
 };
 
