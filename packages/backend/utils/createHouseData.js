@@ -1,5 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { v4 as uuidv4 } from 'uuid';
+import generateFakeAddress from './generateFakeAddress.js';
 
 const cleanCoordinates = (coordinates) => {
     return [parseFloat(coordinates[0]), parseFloat(coordinates[1])];
@@ -17,7 +18,8 @@ const createHouseData = () => {
                 faker.address.nearbyGPSCoordinate([55.861331, -4.250493], milesRadius, false),
             );
             const rent = parseFloat(faker.finance.amount(400, 1500));
-
+            const address = generateFakeAddress();
+            const bedrooms = Math.floor(Math.random() * 4) + 1;
             const house = {
                 id: uuidv4(),
                 details: {
@@ -30,6 +32,8 @@ const createHouseData = () => {
                     bus: null,
                     nearestTrainStation: null,
                     nearestBusStop: null,
+                    bedrooms,
+                    address,
                 },
                 alreadyFetched: false,
             };
@@ -47,8 +51,11 @@ const createHouseData = () => {
 
     fixedHouseCoordinates.forEach((houseCoordinates) => {
         const rent = parseFloat(faker.finance.amount(400, 1500));
+        const address = generateFakeAddress();
+        const bedrooms = Math.floor(Math.random() * 4) + 1;
         const additionalHouse = {
             id: uuidv4(),
+
             details: {
                 coordinates: houseCoordinates,
                 driving: null,
@@ -59,6 +66,8 @@ const createHouseData = () => {
                 nearestTrainStation: null,
                 nearestBusStop: null,
                 rent,
+                bedrooms,
+                address,
             },
             alreadyFetched: false,
         };

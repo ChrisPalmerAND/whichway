@@ -15,7 +15,18 @@ import { DrawerWrapper } from './components/DrawerWrapper';
 import { MainWrapper } from './components/MainWrapper';
 import { Map } from './components/Map';
 
-library.add(faHouse, faCarSide, faBicycle, faTrainSubway, faPersonWalking, faBus);
+import { faBed, faPoundSign } from '@fortawesome/free-solid-svg-icons';
+
+library.add(
+    faHouse,
+    faBed,
+    faPoundSign,
+    faCarSide,
+    faBicycle,
+    faTrainSubway,
+    faPersonWalking,
+    faBus
+);
 const drawerWidth = 320;
 
 function App() {
