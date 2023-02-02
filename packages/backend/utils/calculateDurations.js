@@ -18,12 +18,10 @@ export const calculateBusDuration = (distance, duration) => {
 
 export const calculateTrainDuration = (distance, duration) => {
     if (distance < 5000) {
-        console.log('duration', duration);
         const time = duration * 0.9;
         return transformTime(time);
     }
     if (distance >= 5000 && distance <= 10000) {
-        console.log('duration', duration);
         const time = duration * 0.8;
         return transformTime(time);
     }
