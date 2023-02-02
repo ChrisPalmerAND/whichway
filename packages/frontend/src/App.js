@@ -8,6 +8,7 @@ import { Map } from './components/Map';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
     faHouse,
+    faPoundSign,
     faCarSide,
     faBicycle,
     faTrainSubway,
@@ -15,7 +16,7 @@ import {
     faBus,
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHouse, faCarSide, faBicycle, faTrainSubway, faPersonWalking, faBus);
+library.add(faHouse, faPoundSign, faCarSide, faBicycle, faTrainSubway, faPersonWalking, faBus);
 const drawerWidth = 320;
 
 function App() {
