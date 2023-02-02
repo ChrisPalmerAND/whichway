@@ -1,3 +1,12 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+    faBicycle,
+    faBus,
+    faCarSide,
+    faHouse,
+    faPersonWalking,
+    faTrainSubway,
+} from '@fortawesome/free-solid-svg-icons';
 import { Box, CssBaseline } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
@@ -5,17 +14,8 @@ import { AppBarWrapper } from './components/AppBarWrapper';
 import { DrawerWrapper } from './components/DrawerWrapper';
 import { MainWrapper } from './components/MainWrapper';
 import { Map } from './components/Map';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import {
-    faHouse,
-    faBed,
-    faPoundSign,
-    faCarSide,
-    faBicycle,
-    faTrainSubway,
-    faPersonWalking,
-    faBus,
-} from '@fortawesome/free-solid-svg-icons';
+
+import { faBed, faPoundSign } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
     faHouse,
@@ -31,7 +31,9 @@ const drawerWidth = 320;
 
 function App() {
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
+    // eslint-disable-next-line no-unused-vars
+    const [rentValues, setRentValues] = React.useState([350, 1250]);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -52,10 +54,12 @@ function App() {
                 open={open}
                 theme={theme}
                 handleDrawerClose={handleDrawerClose}
+                rentValues={rentValues}
+                setRentValues={setRentValues}
                 drawerWidth={drawerWidth}
             />
             <MainWrapper open={open} drawerWidth={drawerWidth}>
-                <Map />
+                <Map rentValues={rentValues} />
             </MainWrapper>
         </Box>
     );

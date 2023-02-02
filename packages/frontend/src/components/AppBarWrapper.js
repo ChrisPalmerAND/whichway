@@ -1,4 +1,4 @@
-import Info from '@mui/icons-material/Info';
+import MenuIcon from '@mui/icons-material/Menu';
 import MuiAppBar from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
@@ -36,10 +36,10 @@ export const AppBarWrapper = ({ handleDrawerOpen, open, drawerWidth }) => {
                     edge="start"
                     sx={{ mr: 2, ...(open && { display: 'none' }) }}
                 >
-                    <Info />
+                    <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap component="div">
-                    Whichway?
+                    {"Where's better?"}
                 </Typography>
             </Toolbar>
         </AppBar>

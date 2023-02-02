@@ -19,7 +19,7 @@ export const andDigitalIcon = new Icon({
     iconUrl: '/images/and.png',
     iconSize: [35, 35],
 });
-export const Map = () => {
+export const Map = ({ rentValues }) => {
     // eslint-disable-next-line no-unused-vars
     const [mapLayers, setMapLayers] = useState([]);
     const [polygonPoints, setPolygonPoints] = useState([]);
@@ -30,6 +30,14 @@ export const Map = () => {
     const getPropertiesWithinPolygons = async (polygonPoints) => {
         const propertiesWithinPolygons = await getPropertiesWithinPolygonsPoints(polygonPoints);
         setPropertiesInScope(propertiesWithinPolygons.data);
+    };
+
+    // eslint-disable-next-line no-unused-vars
+    const getFilteredProperties = () => {
+        const filteredProperties = propertiesInScope.data.filter((property) => {
+            return property.details.rent >= rentValues[0] && property.details.rent <= rentValues[1];
+        });
+        setPropertiesInScope(filteredProperties);
     };
 
     const getPropertyDetails = async (propertyId) => {
@@ -50,9 +58,11 @@ export const Map = () => {
     useEffect(() => {
         if (polygonPoints.length) {
             getPropertiesWithinPolygons(polygonPoints);
+            console.log(`State pushed rent!!! ${rentValues}`);
+            // getFilteredProperties();
         }
         //don't add propertiesLatLong will cause infinite loop
-    }, [polygonPoints]);
+    }, [polygonPoints, rentValues]);
 
     const createDraw = (e) => {
         setPropertiesInScope([]);
