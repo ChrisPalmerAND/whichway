@@ -11,10 +11,16 @@ export const PopUpWrapper = ({ details, setActiveProperty }) => {
             }}
         >
             <div>
-                <h1>
-                    <FontAwesomeIcon icon="fa-solid fa-house" /> {details.address.streetName},{' '}
-                    {details.address.city}, {details.address.postCode}
-                </h1>
+                <p>
+                    <b>
+                        <FontAwesomeIcon icon="fa-solid fa-house" /> {details.address.streetName},{' '}
+                        {details.address.city}, {details.address.postCode}
+                    </b>
+                </p>
+                <p>
+                    <FontAwesomeIcon icon="fa-solid fa-bed" /> Number of bedrooms:{' '}
+                    {details.bedrooms}
+                </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-pound-sign" /> Rent: £{details.rent} pcm
                 </p>
@@ -36,7 +42,7 @@ export const PopUpWrapper = ({ details, setActiveProperty }) => {
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-train-subway" /> Nearest Train Station:
-                    {` ${details.nearestTrainStation.address}`}
+                    {` ${details.nearestTrainStation.address}, ${details.nearestTrainStation.postcode} `}
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-bus" /> Bus:
@@ -44,7 +50,7 @@ export const PopUpWrapper = ({ details, setActiveProperty }) => {
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-bus" /> Nearest Bus Stop:
-                    {` ${details.nearestBusStop.address}`}
+                    {` ${details.nearestBusStop.address}, ${details.nearestBusStop.postcode}`}
                 </p>
             </div>
         </Popup>
