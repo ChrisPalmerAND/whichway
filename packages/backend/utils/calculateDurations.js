@@ -2,12 +2,10 @@ import transformTime from './transformTime.js';
 
 export const calculateBusDuration = (distance, duration) => {
     if (distance < 5000) {
-        console.log('duration', duration);
         const time = duration * 1.2;
         return transformTime(time);
     }
     if (distance >= 5000 && distance <= 10000) {
-        console.log('duration', duration);
         const time = duration * 1.4;
         return transformTime(time);
     }
