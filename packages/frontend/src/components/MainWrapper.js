@@ -1,7 +1,9 @@
 import { styled } from '@mui/material/styles';
 import React from 'react';
+import { AppContext } from '../context';
 
-export const MainWrapper = ({ open, drawerWidth, children }) => {
+export const MainWrapper = ({ drawerWidth, children }) => {
+    const [state] = React.useContext(AppContext);
     const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
         ({ theme, open }) => ({
             flexGrow: 1,
@@ -22,5 +24,5 @@ export const MainWrapper = ({ open, drawerWidth, children }) => {
             }),
         })
     );
-    return <Main open={open}>{children}</Main>;
+    return <Main open={state.open}>{children}</Main>;
 };

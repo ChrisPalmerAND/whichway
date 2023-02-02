@@ -7,8 +7,10 @@ import Typography from '@mui/material/Typography';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import 'leaflet/dist/leaflet.css';
 import React from 'react';
+import { AppContext } from '../context';
 /* eslint-disable react/prop-types */
-export const AppBarWrapper = ({ handleDrawerOpen, open, drawerWidth }) => {
+export const AppBarWrapper = ({ open, drawerWidth }) => {
+    const [state, dispatch] = React.useContext(AppContext);
     const AppBar = styled(MuiAppBar, {
         shouldForwardProp: (prop) => prop !== 'open',
     })(({ theme, open }) => ({
@@ -26,8 +28,12 @@ export const AppBarWrapper = ({ handleDrawerOpen, open, drawerWidth }) => {
         }),
     }));
 
+    const handleDrawerOpen = () => {
+        dispatch({ type: 'openDrawer' });
+    };
+
     return (
-        <AppBar position="fixed" open={open}>
+        <AppBar position="fixed" open={state.open}>
             <Toolbar>
                 <IconButton
                     color="inherit"

@@ -12,18 +12,13 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import { styled } from '@mui/material/styles';
 import React from 'react';
+import { AppContext } from '../context';
 import RangeSlider from './Slider';
 /* eslint-disable react/prop-types */
-export const DrawerWrapper = ({
-    rentValues,
-    setRentValues,
-    open,
-    theme,
-    handleDrawerClose,
-    drawerWidth,
-}) => {
+export const DrawerWrapper = ({ drawerWidth, theme }) => {
+    const [state, dispatch] = React.useContext(AppContext);
     const [openFilters, setOpenFilter] = React.useState(true);
-    const [openInfo, setOpenInfo] = React.useState(true);
+    const [openInfo, setOpenInfo] = React.useState(false);
 
     const handleClickFilters = () => {
         setOpenFilter(!openFilters);
@@ -31,7 +26,9 @@ export const DrawerWrapper = ({
     const handleClickInfo = () => {
         setOpenInfo(!openInfo);
     };
-
+    const handleDrawerClose = () => {
+        dispatch({ type: 'closeDrawer' });
+    };
     const DrawerHeader = styled('div')(({ theme }) => ({
         display: 'flex',
         alignItems: 'center',
@@ -53,7 +50,7 @@ export const DrawerWrapper = ({
             }}
             variant="persistent"
             anchor="left"
-            open={open}
+            open={state.open}
         >
             <DrawerHeader>
                 <IconButton onClick={handleDrawerClose} align="right">
@@ -82,7 +79,7 @@ export const DrawerWrapper = ({
                 <Collapse in={openFilters} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                         <ListItemButton sx={{ pl: 5 }}>
-                            <RangeSlider rentValues={rentValues} setRentValues={setRentValues} />
+                            <RangeSlider />
                         </ListItemButton>
                     </List>
                 </Collapse>

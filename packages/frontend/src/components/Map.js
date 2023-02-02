@@ -1,9 +1,10 @@
 import { Icon } from 'leaflet';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import 'leaflet/dist/leaflet.css';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { FeatureGroup, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
+import { AppContext } from '../context';
 import {
     getPropertiesWithinPolygonsPoints,
     getSinglePropertyDetails,
@@ -19,26 +20,21 @@ export const andDigitalIcon = new Icon({
     iconUrl: '/images/and.png',
     iconSize: [35, 35],
 });
-export const Map = ({ rentValues }) => {
-    // eslint-disable-next-line no-unused-vars
-    const [mapLayers, setMapLayers] = useState([]);
-    const [polygonPoints, setPolygonPoints] = useState([]);
-    const [propertiesInScope, setPropertiesInScope] = useState([]);
-    const [activeProperty, setActiveProperty] = useState();
+export const Map = () => {
+    const [state, dispatch] = React.useContext(AppContext);
+    const { rent, mapLayers, polygonPoints, propertiesInScope, activeProperty } = state;
     const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
-
-    const getPropertiesWithinPolygons = async (polygonPoints) => {
-        const propertiesWithinPolygons = await getPropertiesWithinPolygonsPoints(polygonPoints);
-        setPropertiesInScope(propertiesWithinPolygons.data);
-    };
-
-    // eslint-disable-next-line no-unused-vars
-    const getFilteredProperties = () => {
-        const filteredProperties = propertiesInScope.data.filter((property) => {
-            return property.details.rent >= rentValues[0] && property.details.rent <= rentValues[1];
-        });
-        setPropertiesInScope(filteredProperties);
-    };
+    const [minRent, maxRent] = rent;
+    const getPropertiesWithinPolygons = useCallback(
+        async (polygonPoints) => {
+            const propertiesWithinPolygons = await getPropertiesWithinPolygonsPoints(polygonPoints);
+            const propertiesWithinRentRange = propertiesWithinPolygons.data.filter(
+                (property) => property.details.rent >= minRent && property.details.rent <= maxRent
+            );
+            dispatch({ type: 'setPropertiesInScope', value: propertiesWithinRentRange });
+        },
+        [dispatch, maxRent, minRent]
+    );
 
     const getPropertyDetails = async (propertyId) => {
         const property = propertiesInScope.find((prop) => prop.id === propertyId);
@@ -47,45 +43,47 @@ export const Map = ({ rentValues }) => {
                 const index = propertiesInScope.findIndex((property) => property.id === data.id);
                 const newProp = propertiesInScope;
                 newProp[index] = { ...data, alreadyFetched: true };
-                setPropertiesInScope(newProp);
-                setActiveProperty(propertiesInScope[index]);
+                dispatch({ type: 'setPropertiesInScope', value: newProp });
+                dispatch({ type: 'setActiveProperty', value: propertiesInScope[index] });
             });
         } else {
-            setActiveProperty(property);
+            dispatch({ type: 'setActiveProperty', value: property });
         }
     };
 
     useEffect(() => {
         if (polygonPoints.length) {
             getPropertiesWithinPolygons(polygonPoints);
-            console.log(`State pushed rent!!! ${rentValues}`);
-            // getFilteredProperties();
+            console.log(`State pushed rent!!! ${state.rent}`);
         }
-        //don't add propertiesLatLong will cause infinite loop
-    }, [polygonPoints, rentValues]);
+    }, [getPropertiesWithinPolygons, polygonPoints, state.rent]);
 
     const createDraw = (e) => {
-        setPropertiesInScope([]);
+        dispatch({ type: 'setPropertiesInScope', value: [] });
+
         const { layerType, layer } = e;
         if (layerType === 'polygon') {
             const { _leaflet_id: leafletId } = layer;
+
             //in case of multi poligon, we want a way to know which coordinate belongs to which polygon, hence we add an id.
-            setMapLayers((layers) => [
-                ...layers,
-                { id: leafletId, latLngs: layer.getLatLngs()[0] },
-            ]);
+            dispatch({
+                type: 'setMapLayers',
+                value: [...mapLayers, { id: leafletId, latLngs: layer.getLatLngs()[0] }],
+            });
 
             //we create a polygon coordinate array as they are needed for turf to check which properties are inside or not.
-            setPolygonPoints((layers) => {
-                return [
-                    ...layers,
+
+            dispatch({
+                type: 'setPolygonPoints',
+                value: [
+                    ...polygonPoints,
                     {
                         id: leafletId,
                         coordinates: layer
                             .toGeoJSON()
                             .geometry.coordinates[0].map((latLng) => [latLng[1], latLng[0]]),
                     },
-                ];
+                ],
             });
         }
     };
@@ -94,17 +92,18 @@ export const Map = ({ rentValues }) => {
         const {
             layers: { _layers },
         } = e;
-        setPropertiesInScope([]);
+        dispatch({ type: 'setPropertiesInScope', value: [] });
         Object.values(_layers).map(({ _leaflet_id, editing }) => {
             //we reset the edited coordinate of the selected polygon
-            setMapLayers((layers) =>
-                layers.map((l) => {
+            dispatch({
+                type: 'setMapLayers',
+                value: mapLayers.map((l) => {
                     return l.id === _leaflet_id ? { ...l, latLngs: { ...editing.latlngs[0] } } : 1;
-                })
-            );
-
-            setPolygonPoints((layers) =>
-                layers.map((l) => {
+                }),
+            });
+            dispatch({
+                type: 'setPolygonPoints',
+                value: polygonPoints.map((l) => {
                     //first and last coordinate need to be the same. toGeoJson()does that for us, but it's not available during editing
                     const coordinates = [
                         ...editing.latlngs[0][0].map((l) => [l.lat, l.lng]),
@@ -112,8 +111,8 @@ export const Map = ({ rentValues }) => {
                     ];
 
                     return l.id === _leaflet_id ? { ...l, coordinates } : { ...l };
-                })
-            );
+                }),
+            });
         });
     };
 
@@ -123,18 +122,25 @@ export const Map = ({ rentValues }) => {
         } = e;
         Object.values(_layers).map(({ _leaflet_id }) => {
             //remove the selected polygon through its id
-            setMapLayers((layers) => layers.filter((l) => l.id !== _leaflet_id));
-            setPropertiesInScope((properties) =>
-                properties.filter((property) => property.leafletId !== _leaflet_id)
-            );
-            setPolygonPoints((layers) => layers.filter((l) => l.id !== _leaflet_id));
+            dispatch({
+                type: 'setMapLayers',
+                value: mapLayers.filter((l) => l.id !== _leaflet_id),
+            });
+            dispatch({
+                type: 'setPolygonPoints',
+                value: polygonPoints.filter((l) => l.id !== _leaflet_id),
+            });
+            dispatch({
+                type: 'setPropertiesInScope',
+                value: propertiesInScope.filter((property) => property.leafletId !== _leaflet_id),
+            });
         });
     };
 
     return (
         <div>
             <MapContainer
-                center={[55.860916, -4.251433]}
+                center={AND_DIGITAL_COORDINATES}
                 zoom={13}
                 scrollWheelZoom={false}
                 style={{ width: '100%', height: '100vh' }}

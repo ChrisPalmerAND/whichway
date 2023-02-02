@@ -3,6 +3,7 @@ import { Grid, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import * as React from 'react';
+import { AppContext } from '../context';
 
 function valuetext(rentValues) {
     return `£ ${rentValues}`;
@@ -27,10 +28,12 @@ const marks = [
     },
 ];
 
-export default function RangeSlider({ rentValues, setRentValues }) {
+export default function RangeSlider() {
+    const [state, dispatch] = React.useContext(AppContext);
     const handleChange = (event, newValue) => {
-        setRentValues(newValue);
-        console.log('newValue', newValue);
+        dispatch({ type: 'setRent', value: newValue });
+
+        console.log('newValue', state.rent);
     };
 
     return (
@@ -45,7 +48,7 @@ export default function RangeSlider({ rentValues, setRentValues }) {
                 <Grid item xs>
                     <Slider
                         getAriaLabel={() => 'Temperature range'}
-                        value={rentValues}
+                        value={state.rent}
                         onChange={handleChange}
                         valueLabelDisplay="auto"
                         getAriaValueText={valuetext}
