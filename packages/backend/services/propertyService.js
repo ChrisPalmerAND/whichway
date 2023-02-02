@@ -68,9 +68,22 @@ const getNearestPointOfInterest = async (pointOfInterest, coordinates) => {
     const resp = await axios.get(
         `https://api.mapbox.com/geocoding/v5/mapbox.places/${pointOfInterest}.json?type=poi&proximity=${coordinates}&access_token=${token}`,
     );
+
+    const context = resp.data.features[0].context;
+    const findPostcode = (context) => {
+        let postcode;
+        context.forEach((object) => {
+            if (object.id.match('postcode')) {
+                postcode = object.text;
+            }
+        });
+        return postcode;
+    };
+    const postcode = findPostcode(context);
+
     const data = {
         address: resp.data.features[0].properties.address,
-        postcode: resp.data.features[0].context[0].text,
+        postcode,
         coordinates: resp.data.features[0].geometry.coordinates,
     };
     return data;
