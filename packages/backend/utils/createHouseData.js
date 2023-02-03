@@ -17,7 +17,7 @@ const createHouseData = () => {
             const coordinates = cleanCoordinates(
                 faker.address.nearbyGPSCoordinate([55.861331, -4.250493], milesRadius, false),
             );
-            const rent = parseFloat(faker.finance.amount(400, 1500));
+            const rent = parseFloat(faker.finance.amount(400, 2000));
             const address = generateFakeAddress();
             const bedrooms = Math.floor(Math.random() * 4) + 1;
             const house = {

@@ -27,18 +27,21 @@ export const Map = ({ rentValues }) => {
     const [activeProperty, setActiveProperty] = useState();
     const AND_DIGITAL_COORDINATES = [55.86074, -4.25033];
 
-    const getPropertiesWithinPolygons = async (polygonPoints) => {
-        const propertiesWithinPolygons = await getPropertiesWithinPolygonsPoints(polygonPoints);
+    const getPropertiesWithinPolygons = async (polygonPoints, rentValues) => {
+        const propertiesWithinPolygons = await getPropertiesWithinPolygonsPoints(
+            polygonPoints,
+            rentValues
+        );
         setPropertiesInScope(propertiesWithinPolygons.data);
     };
 
     // eslint-disable-next-line no-unused-vars
-    const getFilteredProperties = () => {
-        const filteredProperties = propertiesInScope.data.filter((property) => {
-            return property.details.rent >= rentValues[0] && property.details.rent <= rentValues[1];
-        });
-        setPropertiesInScope(filteredProperties);
-    };
+    // const getFilteredProperties = () => {
+    //     const filteredProperties = propertiesInScope.data.filter((property) => {
+    //         return property.details.rent >= rentValues[0] && property.details.rent <= rentValues[1];
+    //     });
+    //     setPropertiesInScope(filteredProperties);
+    // };
 
     const getPropertyDetails = async (propertyId) => {
         const property = propertiesInScope.find((prop) => prop.id === propertyId);
@@ -57,9 +60,7 @@ export const Map = ({ rentValues }) => {
 
     useEffect(() => {
         if (polygonPoints.length) {
-            getPropertiesWithinPolygons(polygonPoints);
-            console.log(`State pushed rent!!! ${rentValues}`);
-            // getFilteredProperties();
+            getPropertiesWithinPolygons(polygonPoints, rentValues);
         }
         //don't add propertiesLatLong will cause infinite loop
     }, [polygonPoints, rentValues]);
@@ -146,7 +147,7 @@ export const Map = ({ rentValues }) => {
                 <Marker key={'And_marker'} icon={andDigitalIcon} position={AND_DIGITAL_COORDINATES}>
                     <Popup>
                         <div>
-                            <h2>Best place </h2>
+                            <h2>The Best Place To Work </h2>
                         </div>
                     </Popup>
                 </Marker>

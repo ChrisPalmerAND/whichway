@@ -33,7 +33,7 @@ function App() {
     const theme = useTheme();
     const [open, setOpen] = React.useState(true);
     // eslint-disable-next-line no-unused-vars
-    const [rentValues, setRentValues] = React.useState([350, 1250]);
+    const [rentValues, setRentValues] = React.useState([0, 2000]);
 
     const handleDrawerOpen = () => {
         setOpen(true);

@@ -18,11 +18,11 @@ export const PopUpWrapper = ({ details, setActiveProperty }) => {
                     </b>
                 </p>
                 <p>
-                    <FontAwesomeIcon icon="fa-solid fa-bed" /> Number of bedrooms:{' '}
-                    {details.bedrooms}
+                    <FontAwesomeIcon icon="fa-solid fa-pound-sign" /> Rent: £{details.rent} pcm
                 </p>
                 <p>
-                    <FontAwesomeIcon icon="fa-solid fa-pound-sign" /> Rent: £{details.rent} pcm
+                    <FontAwesomeIcon icon="fa-solid fa-bed" /> Number of bedrooms:{' '}
+                    {details.bedrooms}
                 </p>
                 <p>
                     <FontAwesomeIcon icon="fa-solid fa-car-side" /> Driving:
