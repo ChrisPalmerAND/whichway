@@ -18,10 +18,11 @@ const getAllProperties = () => {
 };
 
 const getAllPropertiesCoordinate = () => {
-    return getAllProperties().map((property) => property.details.coordinates);
+    const allProps = getAllProperties().map((property) => property.details.coordinates);
+    return allProps;
 };
 
-export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
+export const getPropertiesWithinPolygonsCoordinates = (polygonsData, rentValues) => {
     const points = turf.points(getAllPropertiesCoordinate());
     let propertiesWithinPolygons = [];
     polygonsData.forEach(({ coordinates, id }) => {
@@ -35,7 +36,11 @@ export const getPropertiesWithinPolygonsCoordinates = (polygonsData) => {
                 let property = getAllProperties().find(
                     (property) => property.details.coordinates === feature.geometry.coordinates,
                 );
-                if (property) {
+
+                if (
+                    property.details.rent >= rentValues[0] &&
+                    property.details.rent <= rentValues[1]
+                ) {
                     propertiesWithinPolygons.push({
                         ...property,
                         leafletId: id,

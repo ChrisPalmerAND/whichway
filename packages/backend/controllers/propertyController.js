@@ -6,7 +6,8 @@ import {
 class PropertyController {
     async getPropertiesWithinPolygon(req, res) {
         const polygonData = req.body.polygons;
-        res.send(getPropertiesWithinPolygonsCoordinates(polygonData));
+        const rentValues = req.body.rentValues;
+        res.send(getPropertiesWithinPolygonsCoordinates(polygonData, rentValues));
     }
 
     async getPropertyById(req, res) {
