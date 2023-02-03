@@ -104,15 +104,14 @@ export const DrawerWrapper = ({
                             margin: '5px',
                         }}
                     >
-                        <Typography variant="h4">Not sure where to live?</Typography>
                         <Typography paragraph>
-                            To get started, click the incredibly small polygon icon. Then click
-                            several times on the map to create and area of where you might like to
-                            live.
+                            To get started, click the polygon icon. Then click several times on the
+                            map to create and area of where you might like to live. Make sure to
+                            click on your starting point to finish the polygon.
                         </Typography>
                         <Typography paragraph>
-                            Once you have finished drawing, you see will house icons. Click on any
-                            to read more details.
+                            Once you have finished drawing, the house icons will appear. Click on
+                            any to read more details.
                         </Typography>
                     </Box>
                 </Collapse>

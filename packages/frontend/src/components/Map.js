@@ -147,7 +147,7 @@ export const Map = ({ rentValues }) => {
                 <Marker key={'And_marker'} icon={andDigitalIcon} position={AND_DIGITAL_COORDINATES}>
                     <Popup>
                         <div>
-                            <h2>Best place </h2>
+                            <h2>The Best Place To Work </h2>
                         </div>
                     </Popup>
                 </Marker>

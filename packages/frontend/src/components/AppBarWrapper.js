@@ -39,7 +39,7 @@ export const AppBarWrapper = ({ handleDrawerOpen, open, drawerWidth }) => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap component="div">
-                    {"Where's better?"}
+                    {'Where to live?'}
                 </Typography>
             </Toolbar>
         </AppBar>
